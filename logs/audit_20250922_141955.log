@@ -1,0 +1,41 @@
+2025-09-22 14:19:55,356 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:19:55,357 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_141955.log
+2025-09-22 14:19:55,358 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:19:55,360 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:19:55,362 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:19:55,362 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:19:55,362 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:19:55,363 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:19:55,364 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:19:55,364 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:19:55,365 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:19:55,366 - INFO - main:490 - Application initialization completed
+2025-09-22 14:19:55,392 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:19:55,393 - DEBUG - split_secondary_documents:180 - Secondary content size: 2763 characters
+2025-09-22 14:19:55,393 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:19:55,430 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:19:55,431 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_141955.log
+2025-09-22 14:19:55,432 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:19:55,432 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:19:55,434 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:19:55,434 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:19:55,434 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:19:55,434 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:19:55,435 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:19:55,435 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:19:55,435 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:19:55,435 - INFO - main:490 - Application initialization completed
+2025-09-22 14:19:55,457 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:19:55,458 - DEBUG - split_secondary_documents:180 - Secondary content size: 2763 characters
+2025-09-22 14:19:55,458 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:19:57,747 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "error": "Insufficient information provided for the Letter of Credit (LC) document. Please include the LC details to proceed with the analysis."
+}
+```...
+2025-09-22 14:19:57,747 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:19:57,747 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "error": "Insufficient information provided for the Letter of Credit (LC) document. Please include the LC details to proceed with the analysis."
+}
+```

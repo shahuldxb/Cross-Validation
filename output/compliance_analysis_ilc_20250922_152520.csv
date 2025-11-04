@@ -1,0 +1,18 @@
+Base Document,Target Document,Field(s),Base Value,Target Value,Issue
+Letter of Credit (LC),Commercial Invoice (INV),Quantity,"1,000 units","1,020 units",Quantity in the invoice exceeds the LC requirement.
+Letter of Credit (LC),Commercial Invoice (INV),Total Amount,"USD 200,000.00","USD 193,800.00","Invoice amount is less than the LC amount, but discrepancy arises due to mismatched quantity."
+Letter of Credit (LC),Commercial Invoice (INV),Incoterms,"CIF Jebel Ali, UAE","FOB Qingdao, China",Incoterms in the invoice do not match the LC requirement.
+Letter of Credit (LC),Commercial Invoice (INV),Date of Invoice,N/A,05 February 2026,Invoice date is after the LC's latest shipment date of 31 January 2026.
+Letter of Credit (LC),Packing List (PL),Quantity,"1,000 units","1,000 units","No discrepancy in quantity, but ensure alignment with other documents."
+Letter of Credit (LC),Packing List (PL),Date of Shipment,31 January 2026,30 January 2026,Packing list shipment date is earlier than the LC's latest shipment date.
+Letter of Credit (LC),Certificate of Origin (COO),Goods Description,"1,000 units of Monocrystalline Solar Panels, Model MSP‑380",Solar Panels (Monocrystalline) Model MSP‑380,COO description is less detailed than the LC requirement.
+Letter of Credit (LC),Certificate of Origin (COO),Country of Origin,N/A,People’s Republic of China,"LC does not explicitly state the country of origin, but COO specifies it."
+Letter of Credit (LC),Quality & Certification (QC),Certifications,"IEC 61215, IEC 61730","IEC 61215, IEC 61730","No discrepancy in certifications, but QC does not mention the date of certification issuance."
+Letter of Credit (LC),Quality & Certification (QC),Inspected Quantity,"1,000 units","1,000 units",No discrepancy in inspected quantity.
+Letter of Credit (LC),Bill of Lading (B/L),Consignee,Issuing Bank or Nominated Bank,GulfTech Distributors FZE,Consignee on the B/L does not match the LC requirement.
+Letter of Credit (LC),Bill of Lading (B/L),On-Board Date,N/A,31 January 2026,"On-board date matches the LC's latest shipment date, but ensure compliance with presentation period."
+Letter of Credit (LC),Commercial Invoice (INV),Port of Loading,N/A,"Qingdao Port, China",Port of loading is not explicitly stated in the LC but is mentioned in the invoice.
+Letter of Credit (LC),Commercial Invoice (INV),Port of Discharge,"Jebel Ali, UAE","Jebel Ali, UAE",No discrepancy in the port of discharge.
+Letter of Credit (LC),Packing List (PL),Gross Weight,N/A,"12,750 kg","LC does not specify weight, but packing list provides it."
+Letter of Credit (LC),Packing List (PL),Net Weight,N/A,"12,000 kg","LC does not specify weight, but packing list provides it."
+Letter of Credit (LC),Packing List (PL),Marks & Numbers,N/A,QSP‑SP‑2025,"LC does not specify marks and numbers, but packing list provides them."

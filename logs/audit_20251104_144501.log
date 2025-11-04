@@ -1,0 +1,124 @@
+2025-11-04 14:45:01,181 - INFO - setup_audit_logging:95 - === AUDIT LOG STARTED ===
+2025-11-04 14:45:01,182 - INFO - setup_audit_logging:96 - Log file: logs\audit_20251104_144501.log
+2025-11-04 14:45:01,183 - INFO - main:594 - === STARTING MAIN APPLICATION ===
+2025-11-04 14:45:01,183 - INFO - create_directories:130 - Creating required directories
+2025-11-04 14:45:01,186 - INFO - create_directories:136 - Directories created successfully: input/, output/
+2025-11-04 14:45:01,187 - INFO - validate_azure_config:102 - Starting Azure OpenAI configuration validation
+2025-11-04 14:45:01,188 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-11-04 14:45:01,194 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-11-04 14:45:01,195 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-11-04 14:45:01,196 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-11-04 14:45:01,196 - INFO - validate_azure_config:125 - Azure OpenAI configuration validation completed successfully
+2025-11-04 14:45:01,196 - INFO - main:605 - Application initialization completed
+2025-11-04 14:45:01,220 - INFO - split_secondary_documents:192 - Starting AI-based secondary document splitting
+2025-11-04 14:45:01,220 - DEBUG - split_secondary_documents:198 - Secondary content size: 4565 characters
+2025-11-04 14:45:01,220 - INFO - split_secondary_documents:233 - Sending content to Azure OpenAI for document splitting
+2025-11-04 14:45:01,292 - INFO - setup_audit_logging:95 - === AUDIT LOG STARTED ===
+2025-11-04 14:45:01,293 - INFO - setup_audit_logging:96 - Log file: logs\audit_20251104_144501.log
+2025-11-04 14:45:01,293 - INFO - main:594 - === STARTING MAIN APPLICATION ===
+2025-11-04 14:45:01,293 - INFO - create_directories:130 - Creating required directories
+2025-11-04 14:45:01,295 - INFO - create_directories:136 - Directories created successfully: input/, output/
+2025-11-04 14:45:01,295 - INFO - validate_azure_config:102 - Starting Azure OpenAI configuration validation
+2025-11-04 14:45:01,296 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-11-04 14:45:01,296 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-11-04 14:45:01,296 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-11-04 14:45:01,296 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-11-04 14:45:01,296 - INFO - validate_azure_config:125 - Azure OpenAI configuration validation completed successfully
+2025-11-04 14:45:01,297 - INFO - main:605 - Application initialization completed
+2025-11-04 14:45:01,318 - INFO - split_secondary_documents:192 - Starting AI-based secondary document splitting
+2025-11-04 14:45:01,319 - DEBUG - split_secondary_documents:198 - Secondary content size: 4565 characters
+2025-11-04 14:45:01,319 - INFO - split_secondary_documents:233 - Sending content to Azure OpenAI for document splitting
+2025-11-04 14:45:03,041 - ERROR - split_secondary_documents:304 - Error in AI-based document splitting: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}
+Traceback (most recent call last):
+  File "D:\tools\FInal Cross Valilation\trade_finance_app.py", line 244, in split_secondary_documents
+    response = client.chat.completions.create(
+        model=chat_deployment,
+    ...<4 lines>...
+        temperature=0.3
+    )
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1147, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<46 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}
+2025-11-04 14:45:03,042 - ERROR - split_secondary_documents:304 - Error in AI-based document splitting: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}
+Traceback (most recent call last):
+  File "D:\tools\FInal Cross Valilation\trade_finance_app.py", line 244, in split_secondary_documents
+    response = client.chat.completions.create(
+        model=chat_deployment,
+    ...<4 lines>...
+        temperature=0.3
+    )
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1147, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<46 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}
+2025-11-04 14:45:03,139 - INFO - clean_input_directory:140 - Cleaning input directory
+2025-11-04 14:45:03,141 - DEBUG - clean_input_directory:150 - Deleted file: COMMERCIAL INVOICE.txt
+2025-11-04 14:45:03,142 - DEBUG - clean_input_directory:150 - Deleted file: ilc.txt
+2025-11-04 14:45:03,142 - DEBUG - clean_input_directory:150 - Deleted file: INSURANCE CERTIFICATE POLICY.txt
+2025-11-04 14:45:03,143 - DEBUG - clean_input_directory:150 - Deleted file: OCEAN BILL OF.txt
+2025-11-04 14:45:03,143 - DEBUG - clean_input_directory:150 - Deleted file: PACKING LIST.txt
+2025-11-04 14:45:03,144 - DEBUG - clean_input_directory:150 - Deleted file: QUALITY CERTIFICATE.txt
+2025-11-04 14:45:03,144 - INFO - clean_input_directory:156 - Cleaned input directory. Deleted 6 files: ['COMMERCIAL INVOICE.txt', 'ilc.txt', 'INSURANCE CERTIFICATE POLICY.txt', 'OCEAN BILL OF.txt', 'PACKING LIST.txt', 'QUALITY CERTIFICATE.txt']
+2025-11-04 14:45:03,145 - INFO - save_primary_document:160 - Saving primary document with code: ILC
+2025-11-04 14:45:03,147 - INFO - save_primary_document:179 - Primary document saved successfully: input\ilc.txt
+2025-11-04 14:45:03,147 - DEBUG - save_primary_document:180 - Primary document size: 2535 characters
+2025-11-04 14:45:03,148 - INFO - save_primary_document:181 - Added LC heading for cross_new_csv.py compatibility
+2025-11-04 14:45:03,148 - INFO - save_primary_document:182 - Using lowercase filename ilc.txt for LC detection
+2025-11-04 14:45:03,148 - INFO - split_secondary_documents:192 - Starting AI-based secondary document splitting
+2025-11-04 14:45:03,148 - DEBUG - split_secondary_documents:198 - Secondary content size: 4565 characters
+2025-11-04 14:45:03,148 - INFO - split_secondary_documents:233 - Sending content to Azure OpenAI for document splitting
+2025-11-04 14:45:04,458 - ERROR - split_secondary_documents:304 - Error in AI-based document splitting: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}
+Traceback (most recent call last):
+  File "D:\tools\FInal Cross Valilation\trade_finance_app.py", line 244, in split_secondary_documents
+    response = client.chat.completions.create(
+        model=chat_deployment,
+    ...<4 lines>...
+        temperature=0.3
+    )
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1147, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<46 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shahul\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}

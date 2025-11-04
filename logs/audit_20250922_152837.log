@@ -1,0 +1,45 @@
+2025-09-22 15:28:37,357 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:37,359 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152837.log
+2025-09-22 15:28:37,360 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:37,361 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:37,362 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:37,362 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:37,362 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:37,363 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:37,363 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:37,363 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:37,363 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:37,364 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:37,381 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:37,381 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:37,382 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:37,789 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:37,790 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152837.log
+2025-09-22 15:28:37,790 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:37,791 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:37,792 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:37,792 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:37,793 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:37,793 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:37,793 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:37,794 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:37,794 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:37,795 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:37,816 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:37,817 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:37,817 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:37,952 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:37,952 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152837.log
+2025-09-22 15:28:37,952 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:37,953 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:37,953 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:37,953 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:37,954 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:37,954 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:37,954 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:37,954 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:37,955 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:37,955 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:37,975 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:37,976 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:37,976 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting

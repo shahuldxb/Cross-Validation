@@ -1,0 +1,50 @@
+2025-09-22 14:27:22,779 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:27:22,787 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_142722.log
+2025-09-22 14:27:22,790 - INFO - main:489 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:27:22,793 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:27:22,795 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:27:22,798 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:27:22,799 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:27:22,803 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:27:22,806 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:27:22,807 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:27:22,812 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:27:22,814 - INFO - main:500 - Application initialization completed
+2025-09-22 14:27:22,842 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:27:22,844 - DEBUG - split_secondary_documents:180 - Secondary content size: 2763 characters
+2025-09-22 14:27:22,844 - INFO - split_secondary_documents:271 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:27:39,890 - DEBUG - split_secondary_documents:292 - AI response: ```json
+[
+  {
+    "heading": "Commercial Invoice",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina ...
+2025-09-22 14:27:39,890 - ERROR - split_secondary_documents:299 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:27:39,890 - DEBUG - split_secondary_documents:300 - Raw response: ```json
+[
+  {
+    "heading": "Commercial Invoice",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electronics LLC, Dubai, UAE\nGoods Description: Rechargeable Lithium-Ion Batteries (Model LP-500)\nQuantity: 520 units\nUnit Price: USD 147.00\nTotal Amount: USD 76,440.00\nIncoterms: FOB Yantian Port, China (Incoterms® 2020)\nCountry of Origin: China\nPort of Loading: Yantian Port, China\nPort of Discharge: Port Khalifa, Abu Dhabi, UAE\nAuthorized Signature and Company Seal: Shenzhen PowerTech Co. Ltd.",
+    "identified_name": "Commercial Invoice"
+  },
+  {
+    "heading": "Packing List",
+    "content": "Exporter: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nPacking List No.: PL-2025-1031\nDate of Issue: 17 October 2025\nConsignee: Al Madinah Electronics LLC, Dubai, UAE\nGoods Description: Lithium-Ion Batteries (Model LP-500)\nQuantity: 500 units\nNumber of Packages: 52 cartons\nGross Weight: 1,040 kg\nNet Weight: 920 kg\nMarks & Numbers: PT-LION-2025\nPort of Loading: Yantian Port, China\nPort of Discharge: Port Khalifa, Abu Dhabi, UAE\nDate of Shipment: 18 October 2025\nPartial Shipment: Allowed\nAuthorized Signature and Company Seal: Shenzhen PowerTech Co. Ltd.",
+    "identified_name": "Packing List"
+  },
+  {
+    "heading": "Certificate of Origin",
+    "content": "Issuing Authority: Shenzhen Chamber of Commerce\nCertificate No.: COO-2025-1129\nExporter: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nConsignee: Al Madinah Electronics LLC, Dubai, UAE\nGoods Description: Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)\nHS Code: 8507.60\nQuantity: 480 units\nCountry of Origin: People’s Republic of China\nDate of Export: 20 October 2025\nPlace of Issue: Shenzhen, China\nAuthorized Stamp and Signature: Shenzhen Chamber of Commerce",
+    "identified_name": "Certificate of Origin"
+  },
+  {
+    "heading": "Inspection / Quality Certificate",
+    "content": "Issued By: Shenzhen PowerTech Co. Ltd. – Quality Assurance Division\nCertificate No.: QC-2025-7782\nInspection Date: 21 October 2025\nExporter: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nConsignee: Al Madinah Electronics LLC, Dubai, UAE\nGoods: Rechargeable Lithium-Ion Batteries (Model LP-500)\nInspected Quantity: 480 units\nResult: Passed — Functional and Physical QC\nInspection Method: Random Sampling (AQL 1.0)\nPort of Loading: Yantian Port, China\nPort of Discharge: Port Khalifa, Abu Dhabi, UAE\nAuthorized Signature: QA Director, Shenzhen PowerTech",
+    "identified_name": "Inspection / Quality Certificate"
+  },
+  {
+    "heading": "Dangerous Goods Declaration",
+    "content": "Shipper: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nConsignee: Al Madinah Electronics LLC, Dubai, UAE\nVessel/Voyage No.: COSCO Vessel / Voyage 2025-42\nPort of Loading: Yantian Port, China\nPort of Discharge: Port Khalifa, Abu Dhabi, UAE\nDescription of Goods: LITHIUM METAL BATTERIES\nUN Number: UN 3090\nIMO Class: 9\nPacking Group: II\nNumber of Packages: 50 cartons\nNet Quantity of Dangerous Goods: 920 kg\nPacking Instruction: P903\nDeclaration Date: 20 October 2025\nSigned: Authorized DG Officer, Shenzhen PowerTech Co. Ltd.",
+    "identified_name": "Dangerous Goods Declaration"
+  }
+]
+```

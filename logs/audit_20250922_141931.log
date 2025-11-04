@@ -1,0 +1,26 @@
+2025-09-22 14:19:31,370 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:19:31,371 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_141931.log
+2025-09-22 14:19:31,371 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:19:31,373 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:19:31,373 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:19:31,374 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:19:31,376 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:19:31,376 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:19:31,378 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:19:31,379 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:19:31,379 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:19:31,379 - INFO - main:490 - Application initialization completed
+2025-09-22 14:19:31,406 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:19:31,407 - DEBUG - split_secondary_documents:180 - Secondary content size: 2763 characters
+2025-09-22 14:19:31,407 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:19:33,583 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "error": "The Letter of Credit (LC) document is missing. Please provide the LC document to proceed with the discrepancy analysis."
+}
+```...
+2025-09-22 14:19:33,583 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:19:33,584 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "error": "The Letter of Credit (LC) document is missing. Please provide the LC document to proceed with the discrepancy analysis."
+}
+```

@@ -1,0 +1,12 @@
+Base Document,Target Document,Field(s),Base Value,Target Value,Issue
+LC,Commercial Invoice,Quantity,"1,000 units","1,020 units",Quantity mismatch between LC and Commercial Invoice
+LC,Commercial Invoice,Total Amount,"USD 200,000.00","USD 193,800.00",Total amount in Commercial Invoice is less than LC amount
+LC,Commercial Invoice,Incoterms,CIF Jebel Ali,FOB Qingdao,Incoterms mismatch between LC and Commercial Invoice
+LC,Commercial Invoice,Invoice Date,N/A,05 February 2026,Invoice date is after the latest shipment date in LC
+LC,Packing List,Quantity,"1,000 units","1,000 units","No discrepancy in quantity, but mismatch with Commercial Invoice quantity"
+LC,Certificate of Origin,Goods Description,"Monocrystalline Solar Panels, Model MSP‑380",Solar Panels (Monocrystalline) Model MSP‑380,Minor formatting difference in goods description
+LC,Certificate of Origin,Country of Origin,N/A,People’s Republic of China,Missing explicit mention of country of origin in LC
+LC,Quality & Certification,Certification Date,N/A,Not mentioned,Missing certification issue date in Quality & Certification document
+LC,Bill of Lading,Consignee,Issuing Bank or Nominated Bank,GulfTech Distributors FZE,Consignee mismatch between LC and Bill of Lading
+LC,Bill of Lading,On-Board Date,N/A,31 January 2026,On-Board Date matches shipment date but is not explicitly stated in LC
+LC,Presentation Period,Presentation Period,20 calendar days,N/A,Limited time for presentation due to shipment date proximity to expiry

@@ -1,0 +1,139 @@
+2025-09-22 14:22:41,133 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:22:41,133 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_142241.log
+2025-09-22 14:22:41,134 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:22:41,134 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:22:41,135 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:22:41,136 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:22:41,136 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:22:41,136 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:22:41,137 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:22:41,137 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:22:41,137 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:22:41,138 - INFO - main:490 - Application initialization completed
+2025-09-22 14:22:41,167 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:22:41,168 - DEBUG - split_secondary_documents:180 - Secondary content size: 2759 characters
+2025-09-22 14:22:41,168 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:22:41,297 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:22:41,298 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_142241.log
+2025-09-22 14:22:41,298 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:22:41,298 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:22:41,299 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:22:41,299 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:22:41,299 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:22:41,300 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:22:41,300 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:22:41,300 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:22:41,300 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:22:41,301 - INFO - main:490 - Application initialization completed
+2025-09-22 14:22:41,322 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:22:41,323 - DEBUG - split_secondary_documents:180 - Secondary content size: 2759 characters
+2025-09-22 14:22:41,323 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:22:43,548 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "error": "Insufficient information provided for the Letter of Credit (LC) document. Please include the LC details to proceed with the comparison and discrepancy analysis."
+}
+```...
+2025-09-22 14:22:43,548 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:22:43,548 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "error": "Insufficient information provided for the Letter of Credit (LC) document. Please include the LC details to proceed with the comparison and discrepancy analysis."
+}
+```
+2025-09-22 14:22:53,614 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "500 units",
+      "Ta...
+2025-09-22 14:22:53,615 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:22:53,615 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "500 units",
+      "Target Value": "520 units",
+      "Issue": "Mismatch in quantity of goods"
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "500 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity of goods"
+    }
+  ],
+  "detailed_analysis": {
+    "golden_truth_document": "Letter of Credit",
+    "secondary_documents_found": [
+      "Commercial Invoice",
+      "Packing List"
+    ],
+    "total_discrepancies_found": 2,
+    "discrepancies": [
+      {
+        "Serial ID": 1,
+        "Type": "Quantity",
+        "Discrepancy ID": "QTY-001",
+        "Discrepancy Title": "Mismatch in quantity of goods",
+        "Discrepancy Short Detail": "The quantity of goods does not match.",
+        "Discrepancy Long Detail": "The quantity of goods in the Letter of Credit and the Commercial Invoice does not match. This could lead to compliance issues.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit <Document Name> )": "Letter of Credit → Quantity: 500 units",
+          "Target (Secondary)": "Commercial Invoice → Quantity: 520 units",
+          "Difference": "Mismatch in quantity of goods"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "500 units",
+        "Secondary Document Value": "520 units",
+        "Impact": "This could lead to rejection of the document set due to non-compliance with the Letter of Credit terms."
+      },
+      {
+        "Serial ID": 2,
+        "Type": "Quantity",
+        "Discrepancy ID": "QTY-002",
+        "Discrepancy Title": "Mismatch in quantity of goods",
+        "Discrepancy Short Detail": "The quantity of goods does not match.",
+        "Discrepancy Long Detail": "The quantity of goods in the Letter of Credit and the Packing List does not match. This could lead to compliance issues.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit <Document Name> )": "Letter of Credit → Quantity: 500 units",
+          "Target (Secondary)": "Packing List → Quantity: 500 units",
+          "Difference": "Mismatch in quantity of goods"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "500 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "This could lead to rejection of the document set due to non-compliance with the Letter of Credit terms."
+      }
+    ]
+  }
+}
+```
+2025-09-22 14:22:53,616 - INFO - clean_input_directory:122 - Cleaning input directory
+2025-09-22 14:22:53,617 - DEBUG - clean_input_directory:132 - Deleted file: ilc.txt
+2025-09-22 14:22:53,618 - INFO - clean_input_directory:138 - Cleaned input directory. Deleted 1 files: ['ilc.txt']
+2025-09-22 14:22:53,618 - INFO - save_primary_document:142 - Saving primary document with code: ILC
+2025-09-22 14:22:53,619 - INFO - save_primary_document:161 - Primary document saved successfully: input\ilc.txt
+2025-09-22 14:22:53,620 - DEBUG - save_primary_document:162 - Primary document size: 732 characters
+2025-09-22 14:22:53,620 - INFO - save_primary_document:163 - Added LC heading for cross_new_csv.py compatibility
+2025-09-22 14:22:53,620 - INFO - save_primary_document:164 - Using lowercase filename ilc.txt for LC detection
+2025-09-22 14:22:53,620 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:22:53,621 - DEBUG - split_secondary_documents:180 - Secondary content size: 2759 characters
+2025-09-22 14:22:53,621 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:22:56,430 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "error": "Output format is invalid. Please clarify if JSON output is required or Markdown table with detailed analysis as described."
+}
+```...
+2025-09-22 14:22:56,430 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:22:56,431 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "error": "Output format is invalid. Please clarify if JSON output is required or Markdown table with detailed analysis as described."
+}
+```

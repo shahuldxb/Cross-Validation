@@ -1,0 +1,155 @@
+2025-10-27 12:39:45,682 - INFO - setup_audit_logging:95 - === AUDIT LOG STARTED ===
+2025-10-27 12:39:45,684 - INFO - setup_audit_logging:96 - Log file: logs\audit_20251027_123945.log
+2025-10-27 12:39:45,685 - INFO - main:594 - === STARTING MAIN APPLICATION ===
+2025-10-27 12:39:45,686 - INFO - create_directories:130 - Creating required directories
+2025-10-27 12:39:45,687 - INFO - create_directories:136 - Directories created successfully: input/, output/
+2025-10-27 12:39:45,688 - INFO - validate_azure_config:102 - Starting Azure OpenAI configuration validation
+2025-10-27 12:39:45,688 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-10-27 12:39:45,689 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-10-27 12:39:45,690 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-10-27 12:39:45,691 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-10-27 12:39:45,691 - INFO - validate_azure_config:125 - Azure OpenAI configuration validation completed successfully
+2025-10-27 12:39:45,692 - INFO - main:605 - Application initialization completed
+2025-10-27 12:39:45,716 - INFO - split_secondary_documents:192 - Starting AI-based secondary document splitting
+2025-10-27 12:39:45,717 - DEBUG - split_secondary_documents:198 - Secondary content size: 4523 characters
+2025-10-27 12:39:45,717 - INFO - split_secondary_documents:233 - Sending content to Azure OpenAI for document splitting
+2025-10-27 12:39:45,763 - INFO - setup_audit_logging:95 - === AUDIT LOG STARTED ===
+2025-10-27 12:39:45,764 - INFO - setup_audit_logging:96 - Log file: logs\audit_20251027_123945.log
+2025-10-27 12:39:45,765 - INFO - main:594 - === STARTING MAIN APPLICATION ===
+2025-10-27 12:39:45,765 - INFO - create_directories:130 - Creating required directories
+2025-10-27 12:39:45,766 - INFO - create_directories:136 - Directories created successfully: input/, output/
+2025-10-27 12:39:45,767 - INFO - validate_azure_config:102 - Starting Azure OpenAI configuration validation
+2025-10-27 12:39:45,767 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-10-27 12:39:45,767 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-10-27 12:39:45,768 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-10-27 12:39:45,769 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-10-27 12:39:45,770 - INFO - validate_azure_config:125 - Azure OpenAI configuration validation completed successfully
+2025-10-27 12:39:45,771 - INFO - main:605 - Application initialization completed
+2025-10-27 12:39:45,797 - INFO - split_secondary_documents:192 - Starting AI-based secondary document splitting
+2025-10-27 12:39:45,797 - DEBUG - split_secondary_documents:198 - Secondary content size: 4523 characters
+2025-10-27 12:39:45,798 - INFO - split_secondary_documents:233 - Sending content to Azure OpenAI for document splitting
+2025-10-27 12:39:53,201 - INFO - split_secondary_documents:258 - Successfully parsed JSON response with 5 documents
+2025-10-27 12:39:53,202 - DEBUG - split_secondary_documents:291 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-10-27 12:39:53,202 - DEBUG - split_secondary_documents:291 - AI identified document: PACKING LIST -> Packing List
+2025-10-27 12:39:53,202 - DEBUG - split_secondary_documents:291 - AI identified document: OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS -> Bill of Lading
+2025-10-27 12:39:53,202 - DEBUG - split_secondary_documents:291 - AI identified document: INSURANCE CERTIFICATE / POLICY -> Insurance Certificate
+2025-10-27 12:39:53,202 - DEBUG - split_secondary_documents:291 - AI identified document: QUALITY CERTIFICATE -> Quality Certificate
+2025-10-27 12:39:53,202 - INFO - split_secondary_documents:293 - AI-based document splitting completed. Found 5 documents
+2025-10-27 12:39:53,203 - INFO - split_secondary_documents:298 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 762 chars
+2025-10-27 12:39:53,203 - INFO - split_secondary_documents:298 - Document 2: PACKING LIST (Packing List) - 950 chars
+2025-10-27 12:39:53,204 - INFO - split_secondary_documents:298 - Document 3: OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS (Bill of Lading) - 786 chars
+2025-10-27 12:39:53,204 - INFO - split_secondary_documents:298 - Document 4: INSURANCE CERTIFICATE / POLICY (Insurance Certificate) - 624 chars
+2025-10-27 12:39:53,204 - INFO - split_secondary_documents:298 - Document 5: QUALITY CERTIFICATE (Quality Certificate) - 530 chars
+2025-10-27 12:39:53,205 - INFO - ai_verify_and_correct_document_names:313 - Starting AI-based verification of document names
+2025-10-27 12:39:53,228 - INFO - split_secondary_documents:258 - Successfully parsed JSON response with 5 documents
+2025-10-27 12:39:53,228 - DEBUG - split_secondary_documents:291 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-10-27 12:39:53,228 - DEBUG - split_secondary_documents:291 - AI identified document: PACKING LIST -> Packing List
+2025-10-27 12:39:53,228 - DEBUG - split_secondary_documents:291 - AI identified document: OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS -> Bill of Lading
+2025-10-27 12:39:53,228 - DEBUG - split_secondary_documents:291 - AI identified document: INSURANCE CERTIFICATE / POLICY -> Insurance Certificate
+2025-10-27 12:39:53,228 - DEBUG - split_secondary_documents:291 - AI identified document: QUALITY CERTIFICATE -> Quality Certificate
+2025-10-27 12:39:53,228 - INFO - split_secondary_documents:293 - AI-based document splitting completed. Found 5 documents
+2025-10-27 12:39:53,229 - INFO - split_secondary_documents:298 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 762 chars
+2025-10-27 12:39:53,229 - INFO - split_secondary_documents:298 - Document 2: PACKING LIST (Packing List) - 950 chars
+2025-10-27 12:39:53,229 - INFO - split_secondary_documents:298 - Document 3: OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS (Bill of Lading) - 786 chars
+2025-10-27 12:39:53,230 - INFO - split_secondary_documents:298 - Document 4: INSURANCE CERTIFICATE / POLICY (Insurance Certificate) - 624 chars
+2025-10-27 12:39:53,230 - INFO - split_secondary_documents:298 - Document 5: QUALITY CERTIFICATE (Quality Certificate) - 530 chars
+2025-10-27 12:39:53,230 - INFO - ai_verify_and_correct_document_names:313 - Starting AI-based verification of document names
+2025-10-27 12:39:54,797 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified COMMERCIAL INVOICE: Commercial Invoice → Commercial Invoice
+2025-10-27 12:39:54,904 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified COMMERCIAL INVOICE: Commercial Invoice → Commercial Invoice
+2025-10-27 12:39:55,385 - WARNING - ai_verify_and_correct_document_names:368 - Could not parse verification response for PACKING LIST. Using old name.
+2025-10-27 12:39:55,386 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified PACKING LIST: Packing List → Packing List
+2025-10-27 12:39:55,411 - WARNING - ai_verify_and_correct_document_names:368 - Could not parse verification response for PACKING LIST. Using old name.
+2025-10-27 12:39:55,411 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified PACKING LIST: Packing List → Packing List
+2025-10-27 12:39:55,883 - WARNING - ai_verify_and_correct_document_names:368 - Could not parse verification response for OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS. Using old name.
+2025-10-27 12:39:55,884 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS: Bill of Lading → Bill of Lading
+2025-10-27 12:39:55,995 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS: Bill of Lading → Bill of Lading
+2025-10-27 12:39:56,380 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified INSURANCE CERTIFICATE / POLICY: Insurance Certificate → Insurance Certificate
+2025-10-27 12:39:56,478 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified INSURANCE CERTIFICATE / POLICY: Insurance Certificate → Insurance Certificate
+2025-10-27 12:39:56,843 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified QUALITY CERTIFICATE: Quality Certificate → Quality Certificate
+2025-10-27 12:39:56,844 - INFO - ai_verify_and_correct_document_names:397 - Verification completed for 5 documents
+2025-10-27 12:39:56,958 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified QUALITY CERTIFICATE: Quality Certificate → Quality Certificate
+2025-10-27 12:39:56,958 - INFO - ai_verify_and_correct_document_names:397 - Verification completed for 5 documents
+2025-10-27 12:39:56,964 - INFO - clean_input_directory:140 - Cleaning input directory
+2025-10-27 12:39:56,965 - DEBUG - clean_input_directory:150 - Deleted file: COMMERCIAL INVOICE.txt
+2025-10-27 12:39:56,967 - DEBUG - clean_input_directory:150 - Deleted file: ilc.txt
+2025-10-27 12:39:56,968 - DEBUG - clean_input_directory:150 - Deleted file: INSURANCE CERTIFICATE POLICY.txt
+2025-10-27 12:39:56,969 - DEBUG - clean_input_directory:150 - Deleted file: OCEAN BILL OF.txt
+2025-10-27 12:39:56,969 - DEBUG - clean_input_directory:150 - Deleted file: PACKING LIST.txt
+2025-10-27 12:39:56,971 - DEBUG - clean_input_directory:150 - Deleted file: QUALITY CERTIFICATE.txt
+2025-10-27 12:39:56,971 - INFO - clean_input_directory:156 - Cleaned input directory. Deleted 6 files: ['COMMERCIAL INVOICE.txt', 'ilc.txt', 'INSURANCE CERTIFICATE POLICY.txt', 'OCEAN BILL OF.txt', 'PACKING LIST.txt', 'QUALITY CERTIFICATE.txt']
+2025-10-27 12:39:56,971 - INFO - save_primary_document:160 - Saving primary document with code: ILC
+2025-10-27 12:39:56,973 - INFO - save_primary_document:179 - Primary document saved successfully: input\ilc.txt
+2025-10-27 12:39:56,975 - DEBUG - save_primary_document:180 - Primary document size: 2534 characters
+2025-10-27 12:39:56,975 - INFO - save_primary_document:181 - Added LC heading for cross_new_csv.py compatibility
+2025-10-27 12:39:56,976 - INFO - save_primary_document:182 - Using lowercase filename ilc.txt for LC detection
+2025-10-27 12:39:56,976 - INFO - split_secondary_documents:192 - Starting AI-based secondary document splitting
+2025-10-27 12:39:56,977 - DEBUG - split_secondary_documents:198 - Secondary content size: 4523 characters
+2025-10-27 12:39:56,977 - INFO - split_secondary_documents:233 - Sending content to Azure OpenAI for document splitting
+2025-10-27 12:40:03,982 - INFO - split_secondary_documents:258 - Successfully parsed JSON response with 5 documents
+2025-10-27 12:40:03,983 - DEBUG - split_secondary_documents:291 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-10-27 12:40:03,983 - DEBUG - split_secondary_documents:291 - AI identified document: PACKING LIST -> Packing List
+2025-10-27 12:40:03,983 - DEBUG - split_secondary_documents:291 - AI identified document: OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS -> Bill of Lading
+2025-10-27 12:40:03,983 - DEBUG - split_secondary_documents:291 - AI identified document: INSURANCE CERTIFICATE / POLICY -> Insurance Certificate
+2025-10-27 12:40:03,983 - DEBUG - split_secondary_documents:291 - AI identified document: QUALITY CERTIFICATE -> Quality Certificate
+2025-10-27 12:40:03,983 - INFO - split_secondary_documents:293 - AI-based document splitting completed. Found 5 documents
+2025-10-27 12:40:03,984 - INFO - split_secondary_documents:298 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 762 chars
+2025-10-27 12:40:03,984 - INFO - split_secondary_documents:298 - Document 2: PACKING LIST (Packing List) - 950 chars
+2025-10-27 12:40:03,984 - INFO - split_secondary_documents:298 - Document 3: OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS (Bill of Lading) - 786 chars
+2025-10-27 12:40:03,985 - INFO - split_secondary_documents:298 - Document 4: INSURANCE CERTIFICATE / POLICY (Insurance Certificate) - 624 chars
+2025-10-27 12:40:03,985 - INFO - split_secondary_documents:298 - Document 5: QUALITY CERTIFICATE (Quality Certificate) - 530 chars
+2025-10-27 12:40:03,986 - INFO - ai_verify_and_correct_document_names:313 - Starting AI-based verification of document names
+2025-10-27 12:40:05,554 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified COMMERCIAL INVOICE: Commercial Invoice → Commercial Invoice
+2025-10-27 12:40:06,033 - WARNING - ai_verify_and_correct_document_names:368 - Could not parse verification response for PACKING LIST. Using old name.
+2025-10-27 12:40:06,033 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified PACKING LIST: Packing List → Packing List
+2025-10-27 12:40:06,514 - WARNING - ai_verify_and_correct_document_names:368 - Could not parse verification response for OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS. Using old name.
+2025-10-27 12:40:06,515 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified OCEAN BILL OF LADING — FULL SET 3/3 ORIGINALS: Bill of Lading → Bill of Lading
+2025-10-27 12:40:07,021 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified INSURANCE CERTIFICATE / POLICY: Insurance Certificate → Insurance Certificate
+2025-10-27 12:40:07,558 - WARNING - ai_verify_and_correct_document_names:368 - Could not parse verification response for QUALITY CERTIFICATE. Using old name.
+2025-10-27 12:40:07,558 - INFO - ai_verify_and_correct_document_names:390 - ✅ Verified QUALITY CERTIFICATE: Quality Certificate → Quality Certificate
+2025-10-27 12:40:07,558 - INFO - ai_verify_and_correct_document_names:397 - Verification completed for 5 documents
+2025-10-27 12:40:07,560 - INFO - save_secondary_documents:403 - Saving 5 secondary documents
+2025-10-27 12:40:07,561 - INFO - save_secondary_documents:446 - Saved secondary document: COMMERCIAL INVOICE.txt (Commercial Invoice) with heading: Commercial Invoice (INV)
+2025-10-27 12:40:07,562 - INFO - save_secondary_documents:446 - Saved secondary document: PACKING LIST.txt (Packing List) with heading: Packing List (PL)
+2025-10-27 12:40:07,564 - INFO - save_secondary_documents:446 - Saved secondary document: OCEAN BILL OF.txt (Bill of Lading) with heading: Bill of Lading (BOL)
+2025-10-27 12:40:07,565 - INFO - save_secondary_documents:446 - Saved secondary document: INSURANCE CERTIFICATE POLICY.txt (Insurance Certificate) with heading: Insurance Certificate (INS)
+2025-10-27 12:40:07,566 - INFO - save_secondary_documents:446 - Saved secondary document: QUALITY CERTIFICATE.txt (Quality Certificate) with heading: Quality Certificate (QC)
+2025-10-27 12:40:07,567 - INFO - save_secondary_documents:453 - Successfully saved 5 secondary documents
+2025-10-27 12:40:07,579 - INFO - run_discrepancy_analysis:494 - Starting discrepancy analysis
+2025-10-27 12:40:07,579 - INFO - run_discrepancy_analysis:499 - Checking for analysis script: cross_new_csv.py
+2025-10-27 12:40:07,580 - INFO - run_discrepancy_analysis:507 - Analysis script found, preparing to execute
+2025-10-27 12:40:07,581 - INFO - run_discrepancy_analysis:512 - Input files for analysis: ['COMMERCIAL INVOICE.txt', 'ilc.txt', 'INSURANCE CERTIFICATE POLICY.txt', 'OCEAN BILL OF.txt', 'PACKING LIST.txt', 'QUALITY CERTIFICATE.txt']
+2025-10-27 12:40:07,581 - INFO - run_discrepancy_analysis:515 - Executing cross_new_csv.py script
+2025-10-27 12:40:41,445 - INFO - run_discrepancy_analysis:523 - Script execution completed with return code: 0
+2025-10-27 12:40:41,445 - INFO - run_discrepancy_analysis:526 - Script stdout: [*] Starting Trade Finance Compliance Analysis
+==================================================
+[OK] Folders ready: .\input and .\output
+[OK] Found 6 .txt files:
+  - COMMERCIAL INVOICE.txt
+  - ilc.txt
+  - INSURANCE CERTIFICATE POLICY.txt
+  - OCEAN BILL OF.txt
+  - PACKING LIST.txt
+  - QUALITY CERTIFICATE.txt
+[OK] LC document identified by filename: ilc.txt
+[OK] Secondary documents: 5 files
+
+[PROCESSING] Building analysis prompt...
+[PROCESSING] Sending documents to Azure OpenAI for table analysis...
+[OK] Table analysis completed successfully
+[OK] CSV exported: .\output\compliance_analysis_ilc_20251027_124014.csv
+[OK] Results saved to: .\output\compliance_analysis_ilc_20251027_124014.md
+
+==================================================
+[SUCCESS] Compliance Analysis Completed Successfully!
+[REPORT] Report saved to: .\output\compliance_analysis_ilc_20251027_124014.md
+[CSV] CSV exported alongside the report in the output folder.
+[STATS] Base Document: ilc.txt
+[FILES] Secondary Documents: 5 files analyzed
+
+2025-10-27 12:40:41,446 - INFO - run_discrepancy_analysis:540 - Found analysis report: output\compliance_analysis_ilc_20251027_124014.md
+2025-10-27 12:40:41,447 - INFO - run_discrepancy_analysis:544 - Found analysis CSV: output\compliance_analysis_ilc_20251027_124014.csv
+2025-10-27 12:40:41,447 - INFO - run_discrepancy_analysis:551 - Discrepancy analysis completed successfully
+2025-10-27 12:40:41,449 - INFO - display_file_content:563 - Displaying file content: output\compliance_analysis_ilc_20251027_124014.md (type: text)
+2025-10-27 12:40:41,463 - INFO - display_file_content:582 - Successfully displayed text content (16077 characters)
+2025-10-27 12:40:41,465 - INFO - display_file_content:563 - Displaying file content: output\compliance_analysis_ilc_20251027_124014.csv (type: csv)
+2025-10-27 12:40:41,480 - INFO - display_file_content:569 - Successfully displayed CSV with 12 rows

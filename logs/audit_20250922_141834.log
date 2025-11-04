@@ -1,0 +1,116 @@
+2025-09-22 14:18:34,238 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:18:34,238 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_141834.log
+2025-09-22 14:18:34,239 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:18:34,239 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:18:34,241 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:18:34,241 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:18:34,241 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:18:34,242 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:18:34,244 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:18:34,244 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:18:34,245 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:18:34,245 - INFO - main:490 - Application initialization completed
+2025-09-22 14:18:34,270 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:18:34,270 - DEBUG - split_secondary_documents:180 - Secondary content size: 2887 characters
+2025-09-22 14:18:34,271 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:18:34,305 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:18:34,315 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_141834.log
+2025-09-22 14:18:34,316 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:18:34,317 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:18:34,317 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:18:34,317 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:18:34,320 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:18:34,320 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:18:34,320 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:18:34,321 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:18:34,322 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:18:34,322 - INFO - main:490 - Application initialization completed
+2025-09-22 14:18:34,343 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:18:34,347 - DEBUG - split_secondary_documents:180 - Secondary content size: 2887 characters
+2025-09-22 14:18:34,348 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:18:42,453 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Ta...
+2025-09-22 14:18:42,453 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:18:42,453 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "520 units",
+      "Issue": "No discrepancy"
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity"
+    }
+  ],
+  "detailed_analysis": {
+    "golden_truth_document": "Letter of Credit",
+    "secondary_documents_found": [
+      "Commercial Invoice",
+      "Packing List"
+    ],
+    "total_discrepancies_found": 1,
+    "discrepancies": [
+      {
+        "Serial ID": 1,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D001",
+        "Discrepancy Title": "Mismatch in quantity between LC and Packing List",
+        "Discrepancy Short Detail": "The quantity in the Packing List does not match the LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies a quantity of 520 units, whereas the Packing List indicates 500 units. This discrepancy could lead to compliance issues and potential rejection of documents.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Letter of Credit → Quantity: 520 units",
+          "Target (Secondary)": "Packing List → Quantity: 500 units",
+          "Difference": "Mismatch in quantity"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "This discrepancy might result in rejection of the shipment or delay in processing the transaction."
+      }
+    ]
+  }
+}
+```
+2025-09-22 14:18:42,455 - INFO - clean_input_directory:122 - Cleaning input directory
+2025-09-22 14:18:42,457 - DEBUG - clean_input_directory:132 - Deleted file: CERTIFICATE OF ORIGIN.txt
+2025-09-22 14:18:42,457 - DEBUG - clean_input_directory:132 - Deleted file: COMMERCIAL INVOICE.txt
+2025-09-22 14:18:42,458 - DEBUG - clean_input_directory:132 - Deleted file: DANGEROUS GOODS DECLARATION.txt
+2025-09-22 14:18:42,458 - DEBUG - clean_input_directory:132 - Deleted file: ilc.txt
+2025-09-22 14:18:42,459 - DEBUG - clean_input_directory:132 - Deleted file: INSPECTION CERTIFICATE.txt
+2025-09-22 14:18:42,459 - DEBUG - clean_input_directory:132 - Deleted file: PACKING LIST.txt
+2025-09-22 14:18:42,459 - INFO - clean_input_directory:138 - Cleaned input directory. Deleted 6 files: ['CERTIFICATE OF ORIGIN.txt', 'COMMERCIAL INVOICE.txt', 'DANGEROUS GOODS DECLARATION.txt', 'ilc.txt', 'INSPECTION CERTIFICATE.txt', 'PACKING LIST.txt']
+2025-09-22 14:18:42,460 - INFO - save_primary_document:142 - Saving primary document with code: ILC
+2025-09-22 14:18:42,462 - INFO - save_primary_document:161 - Primary document saved successfully: input\ilc.txt
+2025-09-22 14:18:42,463 - DEBUG - save_primary_document:162 - Primary document size: 732 characters
+2025-09-22 14:18:42,463 - INFO - save_primary_document:163 - Added LC heading for cross_new_csv.py compatibility
+2025-09-22 14:18:42,464 - INFO - save_primary_document:164 - Using lowercase filename ilc.txt for LC detection
+2025-09-22 14:18:42,464 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:18:42,464 - DEBUG - split_secondary_documents:180 - Secondary content size: 2887 characters
+2025-09-22 14:18:42,465 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:18:44,400 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "error": "The request exceeds the processing limit. Please simplify or break it into smaller parts."
+}
+```...
+2025-09-22 14:18:44,400 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:18:44,400 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "error": "The request exceeds the processing limit. Please simplify or break it into smaller parts."
+}
+```

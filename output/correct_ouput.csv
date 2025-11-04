@@ -1,0 +1,14 @@
+Base Document,Target Document,Field(s),Base Value,Target Value,Issue
+Letter of Credit,Certificate of Origin,Goods Description,"Lithium-Ion Batteries, UN 3480, Class 9",Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride),Mismatch in goods description and type.
+Letter of Credit,Certificate of Origin,Quantity,500 units,480 units,Quantity mismatch.
+Letter of Credit,Certificate of Origin,Date of Shipment,Latest Shipment Date: 15 October 2025,Date of Export: 20 October 2025,Shipment date exceeds LC's latest shipment date.
+Letter of Credit,Commercial Invoice,Goods Description,"Lithium-Ion Batteries, UN 3480, Class 9",Rechargeable Lithium-Ion Batteries (Model LP-500),Mismatch in goods description.
+Letter of Credit,Commercial Invoice,Quantity,500 units,520 units,Quantity mismatch.
+Letter of Credit,Commercial Invoice,Total Amount,"USD 75,000.00","USD 76,440.00",Amount exceeds LC value.
+Letter of Credit,Commercial Invoice,Incoterms,"CIF Jebel Ali Port, Dubai, UAE","FOB Yantian Port, China",Incoterms mismatch.
+Letter of Credit,Dangerous Goods Declaration,Goods Description,"Lithium-Ion Batteries, UN 3480, Class 9","Lithium Metal Batteries, UN 3090",Mismatch in goods description and UN number.
+Letter of Credit,Dangerous Goods Declaration,Port of Discharge,"Jebel Ali Port, Dubai, UAE","Port Khalifa, Abu Dhabi, UAE",Port of discharge mismatch.
+Letter of Credit,Packing List,Quantity,500 units,500 units,Partial shipment allowed in Packing List but not in LC.
+Letter of Credit,Packing List,Partial Shipment,Not Allowed,Allowed,Partial shipment discrepancy.
+Letter of Credit,Packing List,Port of Discharge,"Jebel Ali Port, Dubai, UAE","Port Khalifa, Abu Dhabi, UAE",Port of discharge mismatch.
+Letter of Credit,Quality Certificate,Quantity,500 units,480 units,Quantity mismatch.

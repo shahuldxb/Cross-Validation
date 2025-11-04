@@ -1,0 +1,8 @@
+Base Document,Target Document,Field(s),Base Value,Target Value,Issue
+LC,Commercial Invoice,Quantity,"1,000 units","1,020 units",Quantity mismatch between LC and Commercial Invoice.
+LC,Commercial Invoice,Total Amount,"USD 200,000.00","USD 193,800.00",Total amount in Commercial Invoice is less than LC amount.
+LC,Commercial Invoice,Incoterms,"CIF Jebel Ali, UAE","FOB Qingdao, China",Incoterms mismatch between LC and Commercial Invoice.
+LC,Commercial Invoice,Date of Invoice,N/A,05 February 2026,Invoice date is after the Latest Shipment Date in LC.
+LC,Packing List,Quantity,"1,000 units","1,000 units","No discrepancy in quantity, but ensure alignment with other documents."
+LC,Bill of Lading,Consignee,GulfTech Distributors FZE,GulfTech Distributors FZE,Ensure consignee matches LC requirements.
+LC,COO,Exporter,Qingdao SolarPanels Co. Ltd.,Qingdao SolarPanels Co. Ltd.,Ensure Exporter matches LC.

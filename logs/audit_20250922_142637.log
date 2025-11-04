@@ -1,0 +1,31 @@
+2025-09-22 14:26:37,793 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:26:37,793 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_142637.log
+2025-09-22 14:26:37,794 - INFO - main:489 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:26:37,794 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:26:37,795 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:26:37,795 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:26:37,795 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:26:37,796 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:26:37,796 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:26:37,796 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:26:37,796 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:26:37,797 - INFO - main:500 - Application initialization completed
+2025-09-22 14:26:37,813 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:26:37,813 - DEBUG - split_secondary_documents:180 - Secondary content size: 2759 characters
+2025-09-22 14:26:37,813 - INFO - split_secondary_documents:271 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:26:50,031 - DEBUG - split_secondary_documents:292 - AI response: [
+    {
+        "heading": "COMMERCIAL INVOICE",
+        "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madin...
+2025-09-22 14:26:50,032 - INFO - split_secondary_documents:297 - Successfully parsed JSON response with 5 documents
+2025-09-22 14:26:50,032 - DEBUG - split_secondary_documents:308 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 14:26:50,032 - DEBUG - split_secondary_documents:308 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 14:26:50,032 - DEBUG - split_secondary_documents:308 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 14:26:50,032 - DEBUG - split_secondary_documents:308 - AI identified document: INSPECTION / QUALITY CERTIFICATE -> Inspection / Quality Certificate
+2025-09-22 14:26:50,033 - DEBUG - split_secondary_documents:308 - AI identified document: DANGEROUS GOODS DECLARATION -> Dangerous Goods Declaration
+2025-09-22 14:26:50,033 - INFO - split_secondary_documents:310 - AI-based document splitting completed. Found 5 documents
+2025-09-22 14:26:50,033 - INFO - split_secondary_documents:315 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 14:26:50,034 - INFO - split_secondary_documents:315 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 14:26:50,035 - INFO - split_secondary_documents:315 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 14:26:50,036 - INFO - split_secondary_documents:315 - Document 4: INSPECTION / QUALITY CERTIFICATE (Inspection / Quality Certificate) - 550 chars
+2025-09-22 14:26:50,036 - INFO - split_secondary_documents:315 - Document 5: DANGEROUS GOODS DECLARATION (Dangerous Goods Declaration) - 523 chars

@@ -1,0 +1,12 @@
+2025-11-04 14:44:30,757 - INFO - setup_audit_logging:95 - === AUDIT LOG STARTED ===
+2025-11-04 14:44:30,758 - INFO - setup_audit_logging:96 - Log file: logs\audit_20251104_144430.log
+2025-11-04 14:44:30,759 - INFO - main:594 - === STARTING MAIN APPLICATION ===
+2025-11-04 14:44:30,760 - INFO - create_directories:130 - Creating required directories
+2025-11-04 14:44:30,762 - INFO - create_directories:136 - Directories created successfully: input/, output/
+2025-11-04 14:44:30,763 - INFO - validate_azure_config:102 - Starting Azure OpenAI configuration validation
+2025-11-04 14:44:30,763 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-11-04 14:44:30,763 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-11-04 14:44:30,764 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-11-04 14:44:30,764 - INFO - validate_azure_config:118 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-11-04 14:44:30,764 - INFO - validate_azure_config:125 - Azure OpenAI configuration validation completed successfully
+2025-11-04 14:44:30,765 - INFO - main:605 - Application initialization completed

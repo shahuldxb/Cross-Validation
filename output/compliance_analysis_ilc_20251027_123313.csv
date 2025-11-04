@@ -1,0 +1,9 @@
+Base Document,Target Document,Field(s),Base Value,Target Value,Issue
+Letter of Credit,Commercial Invoice,Goods Description,"Knitted cotton T‑shirts, 100% cotton","Knitted T‑shirts, 97% cotton / 3% elastane (short sleeve, crew neck)",Fiber content discrepancy; LC requires 100% cotton.
+Letter of Credit,Commercial Invoice,Net Weight,"4,000.00 kg","3,998.00 kg","Net weight discrepancy; LC specifies 4,000.00 kg."
+Letter of Credit,Insurance Certificate,Coverage,Institute Cargo Clauses (C),Institute Cargo Clauses (A),Coverage discrepancy; LC requires Institute Cargo Clauses (C).
+Letter of Credit,Insurance Certificate,Claims Payable,Vietnam,"Dubai, United Arab Emirates",Claims payable location discrepancy; LC requires claims payable in Vietnam.
+Letter of Credit,Bill of Lading,Shipped on Board Date,Not later than 25-Sep-2025,26-Sep-2025,Shipped on board date exceeds the latest shipment date specified in the LC.
+Letter of Credit,Packing List,Gross Weight,"4,200.00 kg","4,198.00 kg","Gross weight discrepancy; LC specifies 4,200.00 kg."
+Letter of Credit,Packing List,Cartons per Pallet,50 pieces per carton,Pallet 7 contains 49 cartons,Quantity discrepancy; LC requires 50 pieces per carton for all pallets.
+Letter of Credit,Certificate of Origin,Buyer Specification,VGE/KT-2025-09,VGE/KT-2025-09 (Rev A),"Buyer specification discrepancy; LC specifies VGE/KT-2025-09 without ""Rev A""."

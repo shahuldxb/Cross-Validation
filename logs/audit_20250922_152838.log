@@ -1,0 +1,169 @@
+2025-09-22 15:28:38,117 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,118 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,119 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,119 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:38,120 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:38,120 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:38,120 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:38,121 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:38,121 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:38,121 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:38,121 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:38,122 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:38,145 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:38,145 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:38,145 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:38,269 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,269 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,270 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,271 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:38,272 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:38,272 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:38,273 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:38,273 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:38,274 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:38,274 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:38,275 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:38,275 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:38,296 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:38,296 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:38,297 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:38,421 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,422 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,422 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,422 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:38,423 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:38,423 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:38,423 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:38,424 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:38,424 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:38,424 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:38,425 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:38,425 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:38,446 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:38,446 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:38,446 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:38,582 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,583 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,584 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,584 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:38,585 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:38,586 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:38,586 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:38,587 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:38,587 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:38,588 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:38,588 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:38,589 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:38,608 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:38,608 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:38,608 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:38,733 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,734 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,734 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,735 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:38,735 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:38,735 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:38,735 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:38,736 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:38,736 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:38,736 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:38,736 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:38,736 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:38,754 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:38,755 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:38,755 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:38,885 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,886 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,886 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,887 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:38,888 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:38,888 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:38,888 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:38,889 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:38,889 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:38,889 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:38,889 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:38,889 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:38,908 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:38,908 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:38,909 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:38,997 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:38,998 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152838.log
+2025-09-22 15:28:38,998 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:38,999 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:39,000 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:39,000 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:39,000 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:39,001 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:39,001 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:39,002 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:39,002 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:39,004 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:39,022 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:28:39,023 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 15:28:39,023 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:28:40,490 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "Commercial Invoice",
+    "content": "Seller: Qingdao SolarPanels Co. Ltd., Qingdao, China\nInvoice No.: INV‑QS‑2025‑2101\nDate of Invoice: 05 February 2026\nBuyer: GulfTech Distr...
+2025-09-22 15:28:40,490 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 13 documents
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Commercial Invoice -> Commercial Invoice
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Packing List -> Packing List
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Certificate of Origin -> Certificate of Origin
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Quality & Certification -> Unknown
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Transport Shipment Document (Bill of Lading) -> Bill of Lading
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 1 -> Quantity Mismatch
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 2 -> Date Mismatch
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 3 -> Amount Mismatch
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 4 -> Packing List vs Invoice Mismatch
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 5 -> Certification Date Missing
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 6 -> On-Board Date Issue
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 7 -> Consignee Mismatch
+2025-09-22 15:28:40,491 - DEBUG - split_secondary_documents:253 - AI identified document: Discrepancy 8 -> Incoterms Mismatch
+2025-09-22 15:28:40,492 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 13 documents
+2025-09-22 15:28:40,492 - INFO - split_secondary_documents:260 - Document 1: Commercial Invoice (Commercial Invoice) - 535 chars
+2025-09-22 15:28:40,492 - INFO - split_secondary_documents:260 - Document 2: Packing List (Packing List) - 584 chars
+2025-09-22 15:28:40,492 - INFO - split_secondary_documents:260 - Document 3: Certificate of Origin (Certificate of Origin) - 458 chars
+2025-09-22 15:28:40,492 - INFO - split_secondary_documents:260 - Document 4: Quality & Certification (Unknown) - 502 chars
+2025-09-22 15:28:40,493 - INFO - split_secondary_documents:260 - Document 5: Transport Shipment Document (Bill of Lading) (Bill of Lading) - 578 chars
+2025-09-22 15:28:40,493 - INFO - split_secondary_documents:260 - Document 6: Discrepancy 1 (Quantity Mismatch) - 96 chars
+2025-09-22 15:28:40,493 - INFO - split_secondary_documents:260 - Document 7: Discrepancy 2 (Date Mismatch) - 86 chars
+2025-09-22 15:28:40,493 - INFO - split_secondary_documents:260 - Document 8: Discrepancy 3 (Amount Mismatch) - 173 chars
+2025-09-22 15:28:40,493 - INFO - split_secondary_documents:260 - Document 9: Discrepancy 4 (Packing List vs Invoice Mismatch) - 118 chars
+2025-09-22 15:28:40,494 - INFO - split_secondary_documents:260 - Document 10: Discrepancy 5 (Certification Date Missing) - 127 chars
+2025-09-22 15:28:40,494 - INFO - split_secondary_documents:260 - Document 11: Discrepancy 6 (On-Board Date Issue) - 243 chars
+2025-09-22 15:28:40,494 - INFO - split_secondary_documents:260 - Document 12: Discrepancy 7 (Consignee Mismatch) - 219 chars
+2025-09-22 15:28:40,494 - INFO - split_secondary_documents:260 - Document 13: Discrepancy 8 (Incoterms Mismatch) - 95 chars
+2025-09-22 15:28:45,162 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:45,163 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:45,163 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:45,163 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:45,163 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:45,163 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:45,163 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:45,163 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:45,163 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:45,164 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:45,164 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:45,165 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:45,165 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:46,709 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:46,710 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:46,710 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:46,710 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:46,710 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:46,710 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:46,710 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:46,710 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:46,710 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:46,711 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:46,711 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:46,711 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:46,712 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars

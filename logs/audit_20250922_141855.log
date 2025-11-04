@@ -1,0 +1,431 @@
+2025-09-22 14:18:55,014 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:18:55,015 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_141855.log
+2025-09-22 14:18:55,016 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:18:55,016 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:18:55,018 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:18:55,018 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:18:55,019 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:18:55,019 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:18:55,021 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:18:55,021 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:18:55,022 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:18:55,022 - INFO - main:490 - Application initialization completed
+2025-09-22 14:18:55,048 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:18:55,049 - DEBUG - split_secondary_documents:180 - Secondary content size: 2887 characters
+2025-09-22 14:18:55,049 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:19:23,665 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Ta...
+2025-09-22 14:19:23,665 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:19:23,665 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity of goods."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Total Amount",
+      "Base Value": "USD 76,440.00",
+      "Target Value": "USD 73,500.00",
+      "Issue": "Total amount does not match the unit price and quantity."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity of goods."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Number of Packages",
+      "Base Value": "Not specified",
+      "Target Value": "52 cartons",
+      "Issue": "Number of packages not specified in LC."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Certificate of Origin",
+      "Field(s)": "Goods Description",
+      "Base Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+      "Target Value": "Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+      "Issue": "Mismatch in goods description."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Certificate of Origin",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "480 units",
+      "Issue": "Mismatch in quantity of goods."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Inspection Certificate",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "480 units",
+      "Issue": "Mismatch in inspected quantity."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Dangerous Goods Declaration",
+      "Field(s)": "Goods Description",
+      "Base Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+      "Target Value": "Lithium Metal Batteries",
+      "Issue": "Mismatch in goods description."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Dangerous Goods Declaration",
+      "Field(s)": "Number of Packages",
+      "Base Value": "Not specified",
+      "Target Value": "50 cartons",
+      "Issue": "Number of packages not specified in LC."
+    }
+  ],
+  "detailed_analysis": {
+    "golden_truth_document": "Letter of Credit",
+    "secondary_documents_found": [
+      "Commercial Invoice (INV-2025-1025)",
+      "Packing List (PL-2025-1031)",
+      "Certificate of Origin (COO-2025-1129)",
+      "Inspection Certificate (QC-2025-7782)",
+      "Dangerous Goods Declaration"
+    ],
+    "total_discrepancies_found": 9,
+    "discrepancies": [
+      {
+        "Serial ID": 1,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D001",
+        "Discrepancy Title": "Mismatch in Quantity of Goods",
+        "Discrepancy Short Detail": "Quantity in Commercial Invoice does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Commercial Invoice lists 500 units. This discrepancy could lead to rejection of the documents.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 520 units",
+          "Target": "Commercial Invoice → Quantity: 500 units",
+          "Difference": "20 units less in Commercial Invoice"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "Potential rejection due to non-compliance with the LC terms."
+      },
+      {
+        "Serial ID": 2,
+        "Type": "Amount Discrepancy",
+        "Discrepancy ID": "D002",
+        "Discrepancy Title": "Mismatch in Total Amount",
+        "Discrepancy Short Detail": "Total amount in Commercial Invoice does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies a total amount of USD 76,440.00, but the Commercial Invoice calculates USD 73,500.00 based on the reduced quantity.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Total Amount: USD 76,440.00",
+          "Target": "Commercial Invoice → Total Amount: USD 73,500.00",
+          "Difference": "USD 2,940.00 less in Commercial Invoice"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "USD 76,440.00",
+        "Secondary Document Value": "USD 73,500.00",
+        "Impact": "Potential rejection due to financial discrepancies."
+      },
+      {
+        "Serial ID": 3,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D003",
+        "Discrepancy Title": "Mismatch in Quantity of Goods",
+        "Discrepancy Short Detail": "Quantity in Packing List does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Packing List lists 500 units. This discrepancy could lead to rejection of the documents.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 520 units",
+          "Target": "Packing List → Quantity: 500 units",
+          "Difference": "20 units less in Packing List"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "Potential rejection due to non-compliance with the LC terms."
+      },
+      {
+        "Serial ID": 4,
+        "Type": "Missing Information",
+        "Discrepancy ID": "D004",
+        "Discrepancy Title": "Number of Packages Not Specified in LC",
+        "Discrepancy Short Detail": "Number of packages is missing in LC.",
+        "Discrepancy Long Detail": "The Letter of Credit does not specify the number of packages, but the Packing List mentions 52 cartons. This could lead to ambiguity.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Number of Packages: Not specified",
+          "Target": "Packing List → Number of Packages: 52 cartons",
+          "Difference": "Missing information in LC"
+        },
+        "Severity Level": "Medium",
+        "Golden Truth Value": "Not specified",
+        "Secondary Document Value": "52 cartons",
+        "Impact": "Could lead to ambiguity and potential compliance issues."
+      },
+      {
+        "Serial ID": 5,
+        "Type": "Description Discrepancy",
+        "Discrepancy ID": "D005",
+        "Discrepancy Title": "Mismatch in Goods Description",
+        "Discrepancy Short Detail": "Goods description in Certificate of Origin does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 'Rechargeable Lithium-Ion Batteries (Model LP-500)', but the Certificate of Origin lists 'Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)'.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Goods Description: Rechargeable Lithium-Ion Batteries (Model LP-500)",
+          "Target": "Certificate of Origin → Goods Description: Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+          "Difference": "Mismatch in product type and specification"
+        },
+        "Severity Level": "Critical",
+        "Golden Truth Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+        "Secondary Document Value": "Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+        "Impact": "High risk of rejection due to fundamental mismatch in goods description."
+      },
+      {
+        "Serial ID": 6,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D006",
+        "Discrepancy Title": "Mismatch in Quantity of Goods",
+        "Discrepancy Short Detail": "Quantity in Certificate of Origin does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Certificate of Origin lists 480 units. This discrepancy could lead to rejection of the documents.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 520 units",
+          "Target": "Certificate of Origin → Quantity: 480 units",
+          "Difference": "40 units less in Certificate of Origin"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "480 units",
+        "Impact": "Potential rejection due to non-compliance with the LC terms."
+      },
+      {
+        "Serial ID": 7,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D007",
+        "Discrepancy Title": "Mismatch in Inspected Quantity",
+        "Discrepancy Short Detail": "Inspected quantity in Inspection Certificate does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Inspection Certificate lists 480 units. This discrepancy could lead to rejection of the documents.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 520 units",
+          "Target": "Inspection Certificate → Inspected Quantity: 480 units",
+          "Difference": "40 units less in Inspection Certificate"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "480 units",
+        "Impact": "Potential rejection due to non-compliance with the LC terms."
+      },
+      {
+        "Serial ID": 8,
+        "Type": "Description Discrepancy",
+        "Discrepancy ID": "D008",
+        "Discrepancy Title": "Mismatch in Goods Description",
+        "Discrepancy Short Detail": "Goods description in Dangerous Goods Declaration does not match LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 'Rechargeable Lithium-Ion Batteries (Model LP-500)', but the Dangerous Goods Declaration lists 'Lithium Metal Batteries'.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Goods Description: Rechargeable Lithium-Ion Batteries (Model LP-500)",
+          "Target": "Dangerous Goods Declaration → Goods Description: Lithium Metal Batteries",
+          "Difference": "Mismatch in product type and specification"
+        },
+        "Severity Level": "Critical",
+        "Golden Truth Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+        "Secondary Document Value": "Lithium Metal Batteries",
+        "Impact": "High risk of rejection due to fundamental mismatch in goods description."
+      },
+      {
+        "Serial ID": 9,
+        "Type": "Missing Information",
+        "Discrepancy ID": "D009",
+        "Discrepancy Title": "Number of Packages Not Specified in LC",
+        "Discrepancy Short Detail": "Number of packages is missing in LC.",
+        "Discrepancy Long Detail": "The Letter of Credit does not specify the number of packages, but the Dangerous Goods Declaration mentions 50 cartons. This could lead to ambiguity.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Number of Packages: Not specified",
+          "Target": "Dangerous Goods Declaration → Number of Packages: 50 cartons",
+          "Difference": "Missing information in LC"
+        },
+        "Severity Level": "Medium",
+        "Golden Truth Value": "Not specified",
+        "Secondary Document Value": "50 cartons",
+        "Impact": "Could lead to ambiguity and potential compliance issues."
+      }
+    ]
+  }
+}
+```
+2025-09-22 14:19:27,101 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Ta...
+2025-09-22 14:19:27,101 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:19:27,101 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "520 units",
+      "Issue": "No discrepancy detected."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity of goods."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Certificate of Origin",
+      "Field(s)": "Goods Description",
+      "Base Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+      "Target Value": "Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+      "Issue": "Mismatch in goods description."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Inspection Certificate",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "480 units",
+      "Issue": "Mismatch in inspected quantity."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Dangerous Goods Declaration",
+      "Field(s)": "Goods Description",
+      "Base Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+      "Target Value": "Lithium Metal Batteries",
+      "Issue": "Mismatch in goods description."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Dangerous Goods Declaration",
+      "Field(s)": "Number of Packages",
+      "Base Value": "52 cartons",
+      "Target Value": "50 cartons",
+      "Issue": "Mismatch in number of packages."
+    }
+  ],
+  "detailed_analysis": {
+    "golden_truth_document": "Letter of Credit",
+    "secondary_documents_found": [
+      "Commercial Invoice: INV-2025-1025",
+      "Packing List: PL-2025-1031",
+      "Certificate of Origin: COO-2025-1129",
+      "Inspection Certificate: QC-2025-7782",
+      "Dangerous Goods Declaration: COSCO Vessel / Voyage 2025-42"
+    ],
+    "total_discrepancies_found": 6,
+    "discrepancies": [
+      {
+        "Serial ID": 1,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D001",
+        "Discrepancy Title": "Mismatch in quantity of goods",
+        "Discrepancy Short Detail": "Quantity in Packing List does not match Letter of Credit.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Packing List mentions only 500 units. This discrepancy could lead to rejection of the document by the issuing bank.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Letter of Credit → Quantity: 520 units",
+          "Target (Secondary)": "Packing List → Quantity: 500 units",
+          "Difference": "20 units short in the Packing List."
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "Potential rejection of the Packing List due to insufficient quantity."
+      },
+      {
+        "Serial ID": 2,
+        "Type": "Goods Description Discrepancy",
+        "Discrepancy ID": "D002",
+        "Discrepancy Title": "Mismatch in goods description",
+        "Discrepancy Short Detail": "Goods description in Certificate of Origin does not match Letter of Credit.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 'Rechargeable Lithium-Ion Batteries (Model LP-500)', but the Certificate of Origin lists 'Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)'. This discrepancy could cause confusion and rejection.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Letter of Credit → Goods Description: Rechargeable Lithium-Ion Batteries (Model LP-500)",
+          "Target (Secondary)": "Certificate of Origin → Goods Description: Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+          "Difference": "Mismatch in battery type and description."
+        },
+        "Severity Level": "Critical",
+        "Golden Truth Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+        "Secondary Document Value": "Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+        "Impact": "High risk of rejection due to incorrect goods description."
+      },
+      {
+        "Serial ID": 3,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D003",
+        "Discrepancy Title": "Mismatch in inspected quantity",
+        "Discrepancy Short Detail": "Inspected quantity in Inspection Certificate does not match Letter of Credit.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Inspection Certificate mentions only 480 units inspected. This discrepancy could raise concerns about the completeness of the shipment.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Letter of Credit → Quantity: 520 units",
+          "Target (Secondary)": "Inspection Certificate → Inspected Quantity: 480 units",
+          "Difference": "40 units short in the Inspection Certificate."
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "480 units",
+        "Impact": "Potential rejection of the Inspection Certificate due to incomplete inspection."
+      },
+      {
+        "Serial ID": 4,
+        "Type": "Goods Description Discrepancy",
+        "Discrepancy ID": "D004",
+        "Discrepancy Title": "Mismatch in goods description",
+        "Discrepancy Short Detail": "Goods description in Dangerous Goods Declaration does not match Letter of Credit.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 'Rechargeable Lithium-Ion Batteries (Model LP-500)', but the Dangerous Goods Declaration lists 'Lithium Metal Batteries'. This discrepancy could lead to compliance issues with shipping regulations.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Letter of Credit → Goods Description: Rechargeable Lithium-Ion Batteries (Model LP-500)",
+          "Target (Secondary)": "Dangerous Goods Declaration → Goods Description: Lithium Metal Batteries",
+          "Difference": "Mismatch in battery type."
+        },
+        "Severity Level": "Critical",
+        "Golden Truth Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+        "Secondary Document Value": "Lithium Metal Batteries",
+        "Impact": "High risk of rejection due to incorrect goods description."
+      },
+      {
+        "Serial ID": 5,
+        "Type": "Packaging Discrepancy",
+        "Discrepancy ID": "D005",
+        "Discrepancy Title": "Mismatch in number of packages",
+        "Discrepancy Short Detail": "Number of packages in Dangerous Goods Declaration does not match Letter of Credit.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 52 cartons, but the Dangerous Goods Declaration lists only 50 cartons. This discrepancy could lead to shipping and compliance issues.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Letter of Credit → Number of Packages: 52 cartons",
+          "Target (Secondary)": "Dangerous Goods Declaration → Number of Packages: 50 cartons",
+          "Difference": "2 cartons short in the Dangerous Goods Declaration."
+        },
+        "Severity Level": "Medium",
+        "Golden Truth Value": "52 cartons",
+        "Secondary Document Value": "50 cartons",
+        "Impact": "Potential rejection of the Dangerous Goods Declaration due to mismatch in packaging details."
+      }
+    ]
+  }
+}
+```

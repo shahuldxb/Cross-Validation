@@ -1,0 +1,13 @@
+Base Document,Target Document,Field(s),Base Value,Target Value,Issue
+Letter of Credit (LC),Commercial Invoice (INV),Goods Description,"Knitted cotton T‑shirts, 100% cotton","Knitted T‑shirts, 97% cotton / 3% elastane",Fiber content discrepancy
+Letter of Credit (LC),Commercial Invoice (INV),Net Weight,"4,000.00 kg","3,998.00 kg",Net weight discrepancy
+Letter of Credit (LC),Insurance Certificate (INS),Coverage,"Institute Cargo Clauses (C), Institute War Clauses (Cargo), Institute Strikes, Riots and Civil Commotions (Cargo)","Institute Cargo Clauses (A), Institute War Clauses (Cargo), Institute Strikes, Riots & Civil Commotions (Cargo)",Coverage clause discrepancy
+Letter of Credit (LC),Insurance Certificate (INS),Claims Payable,Vietnam,"Dubai, United Arab Emirates",Claims payable location discrepancy
+Letter of Credit (LC),Insurance Certificate (INS),Sum Insured,"USD 141,295.00 (110% of USD 128,450.00)","AED 471,000.00",Currency mismatch and incorrect sum insured
+Letter of Credit (LC),Bill of Lading (BOL),Port of Discharge,"Cat Lai Terminal, Ho Chi Minh City, Vietnam","Ho Chi Minh City, Vietnam",Port of discharge mismatch
+Letter of Credit (LC),Bill of Lading (BOL),Place of Delivery,Not specified,"Cat Lai CY, Ho Chi Minh City, Vietnam",Extra information provided
+Letter of Credit (LC),Bill of Lading (BOL),On Board Notation Date,Not later than 25-Sep-2025,26-Sep-2025,Late shipment date
+Letter of Credit (LC),Packing List (PL),Gross Weight,"4,200.00 kg","4,198.00 kg",Gross weight discrepancy
+Letter of Credit (LC),Packing List (PL),Net Weight,"4,000.00 kg","3,998.00 kg",Net weight discrepancy
+Letter of Credit (LC),Packing List (PL),Cartons per Pallet,50 pieces per carton,Pallet 7 has 49 cartons,Quantity discrepancy
+Letter of Credit (LC),Quality Certificate (QC),Buyer Specification,VGE/KT-2025-09,VGE/KT-2025-09 (Rev A),Specification revision mismatch

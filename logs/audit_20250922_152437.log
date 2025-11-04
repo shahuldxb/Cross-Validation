@@ -1,0 +1,113 @@
+2025-09-22 15:24:37,761 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:24:37,762 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152437.log
+2025-09-22 15:24:37,762 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:24:37,762 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:24:37,764 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:24:37,764 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:24:37,766 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:24:37,767 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:24:37,768 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:24:37,770 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:24:37,771 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:24:37,772 - INFO - main:445 - Application initialization completed
+2025-09-22 15:24:37,795 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:24:37,795 - DEBUG - split_secondary_documents:180 - Secondary content size: 4191 characters
+2025-09-22 15:24:37,796 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:24:37,823 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:24:37,823 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152437.log
+2025-09-22 15:24:37,825 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:24:37,825 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:24:37,826 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:24:37,827 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:24:37,828 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:24:37,829 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:24:37,830 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:24:37,831 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:24:37,832 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:24:37,834 - INFO - main:445 - Application initialization completed
+2025-09-22 15:24:37,861 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:24:37,861 - DEBUG - split_secondary_documents:180 - Secondary content size: 4191 characters
+2025-09-22 15:24:37,861 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:24:53,046 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Qingdao SolarPanels Co. Ltd., Qingdao, China\nInvoice No.: INV‑QS‑2025‑2101\nDate of Invoice: 05 February 2026\nBuyer: GulfTech Distr...
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 6 documents
+2025-09-22 15:24:53,047 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:24:53,047 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:24:53,047 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:24:53,047 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY & CERTIFICATION -> Unknown
+2025-09-22 15:24:53,047 - DEBUG - split_secondary_documents:253 - AI identified document: TRANSPORT / SHIPMENT DOCUMENT (BILL OF LADING) -> Bill of Lading
+2025-09-22 15:24:53,047 - DEBUG - split_secondary_documents:253 - AI identified document: DOCUMENT DISCREPANCIES -> Unknown
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 6 documents
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 535 chars
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 584 chars
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 458 chars
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:260 - Document 4: QUALITY & CERTIFICATION (Unknown) - 502 chars
+2025-09-22 15:24:53,047 - INFO - split_secondary_documents:260 - Document 5: TRANSPORT / SHIPMENT DOCUMENT (BILL OF LADING) (Bill of Lading) - 578 chars
+2025-09-22 15:24:53,048 - INFO - split_secondary_documents:260 - Document 6: DOCUMENT DISCREPANCIES (Unknown) - 1188 chars
+2025-09-22 15:24:53,051 - INFO - clean_input_directory:122 - Cleaning input directory
+2025-09-22 15:24:53,052 - DEBUG - clean_input_directory:132 - Deleted file: CERTIFICATE OF ORIGIN.txt
+2025-09-22 15:24:53,053 - DEBUG - clean_input_directory:132 - Deleted file: COMMERCIAL INVOICE.txt
+2025-09-22 15:24:53,053 - DEBUG - clean_input_directory:132 - Deleted file: DANGEROUS GOODS DECLARATION.txt
+2025-09-22 15:24:53,054 - DEBUG - clean_input_directory:132 - Deleted file: ilc.txt
+2025-09-22 15:24:53,055 - DEBUG - clean_input_directory:132 - Deleted file: PACKING LIST.txt
+2025-09-22 15:24:53,055 - DEBUG - clean_input_directory:132 - Deleted file: QUALITY CERTIFICATE.txt
+2025-09-22 15:24:53,055 - INFO - clean_input_directory:138 - Cleaned input directory. Deleted 6 files: ['CERTIFICATE OF ORIGIN.txt', 'COMMERCIAL INVOICE.txt', 'DANGEROUS GOODS DECLARATION.txt', 'ilc.txt', 'PACKING LIST.txt', 'QUALITY CERTIFICATE.txt']
+2025-09-22 15:24:53,056 - INFO - save_primary_document:142 - Saving primary document with code: ILC
+2025-09-22 15:24:53,057 - INFO - save_primary_document:161 - Primary document saved successfully: input\ilc.txt
+2025-09-22 15:24:53,058 - DEBUG - save_primary_document:162 - Primary document size: 845 characters
+2025-09-22 15:24:53,058 - INFO - save_primary_document:163 - Added LC heading for cross_new_csv.py compatibility
+2025-09-22 15:24:53,059 - INFO - save_primary_document:164 - Using lowercase filename ilc.txt for LC detection
+2025-09-22 15:24:53,059 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 15:24:53,059 - DEBUG - split_secondary_documents:180 - Secondary content size: 4191 characters
+2025-09-22 15:24:53,059 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 15:24:53,245 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Qingdao SolarPanels Co. Ltd., Qingdao, China\nInvoice No.: INV‑QS‑2025‑2101\nDate of Invoice: 05 February 2026\nBuyer: GulfTech Distr...
+2025-09-22 15:24:53,245 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 6 documents
+2025-09-22 15:24:53,245 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:24:53,246 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:24:53,246 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:24:53,246 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY & CERTIFICATION -> Unknown
+2025-09-22 15:24:53,246 - DEBUG - split_secondary_documents:253 - AI identified document: TRANSPORT / SHIPMENT DOCUMENT (BILL OF LADING) -> Bill of Lading
+2025-09-22 15:24:53,246 - DEBUG - split_secondary_documents:253 - AI identified document: DOCUMENT DISCREPANCIES -> Unknown
+2025-09-22 15:24:53,246 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 6 documents
+2025-09-22 15:24:53,246 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 535 chars
+2025-09-22 15:24:53,246 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 584 chars
+2025-09-22 15:24:53,247 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 458 chars
+2025-09-22 15:24:53,247 - INFO - split_secondary_documents:260 - Document 4: QUALITY & CERTIFICATION (Unknown) - 502 chars
+2025-09-22 15:24:53,247 - INFO - split_secondary_documents:260 - Document 5: TRANSPORT / SHIPMENT DOCUMENT (BILL OF LADING) (Bill of Lading) - 578 chars
+2025-09-22 15:24:53,248 - INFO - split_secondary_documents:260 - Document 6: DOCUMENT DISCREPANCIES (Unknown) - 1188 chars
+2025-09-22 15:25:09,593 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Qingdao SolarPanels Co. Ltd., Qingdao, China\nInvoice No.: INV‑QS‑2025‑2101\nDate of Invoice: 05 February 2026\nBuyer: GulfTech Distr...
+2025-09-22 15:25:09,593 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 6 documents
+2025-09-22 15:25:09,594 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:25:09,594 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:25:09,594 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:25:09,595 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY & CERTIFICATION -> Unknown
+2025-09-22 15:25:09,595 - DEBUG - split_secondary_documents:253 - AI identified document: TRANSPORT / SHIPMENT DOCUMENT (BILL OF LADING) -> Bill of Lading
+2025-09-22 15:25:09,595 - DEBUG - split_secondary_documents:253 - AI identified document: DOCUMENT DISCREPANCIES -> Unknown
+2025-09-22 15:25:09,595 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 6 documents
+2025-09-22 15:25:09,595 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 535 chars
+2025-09-22 15:25:09,596 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 584 chars
+2025-09-22 15:25:09,597 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 458 chars
+2025-09-22 15:25:09,598 - INFO - split_secondary_documents:260 - Document 4: QUALITY & CERTIFICATION (Unknown) - 502 chars
+2025-09-22 15:25:09,599 - INFO - split_secondary_documents:260 - Document 5: TRANSPORT / SHIPMENT DOCUMENT (BILL OF LADING) (Bill of Lading) - 578 chars
+2025-09-22 15:25:09,599 - INFO - split_secondary_documents:260 - Document 6: DOCUMENT DISCREPANCIES (Unknown) - 1188 chars
+2025-09-22 15:25:09,600 - INFO - save_secondary_documents:272 - Saving 6 secondary documents
+2025-09-22 15:25:09,603 - INFO - save_secondary_documents:301 - Saved secondary document: COMMERCIAL INVOICE.txt (Commercial Invoice) with heading: Commercial Invoice (INV)
+2025-09-22 15:25:09,605 - INFO - save_secondary_documents:301 - Saved secondary document: PACKING LIST.txt (Packing List) with heading: Packing List (PL)
+2025-09-22 15:25:09,606 - INFO - save_secondary_documents:301 - Saved secondary document: CERTIFICATE OF ORIGIN.txt (Certificate of Origin) with heading: Insurance Certificate (INS)
+2025-09-22 15:25:09,609 - INFO - save_secondary_documents:301 - Saved secondary document: QUALITY & CERTIFICATION.txt (Unknown) with heading: Trade Document (Unknown)
+2025-09-22 15:25:09,610 - ERROR - save_secondary_documents:305 - Error saving secondary document 5: [Errno 2] No such file or directory: 'input\\TRANSPORT \\ SHIPMENT DOCUMENT (BILL OF LADING).txt'
+2025-09-22 15:25:09,612 - INFO - save_secondary_documents:301 - Saved secondary document: DOCUMENT DISCREPANCIES.txt (Unknown) with heading: Trade Document (Unknown)
+2025-09-22 15:25:09,612 - INFO - save_secondary_documents:308 - Successfully saved 5 secondary documents
+2025-09-22 15:25:09,625 - INFO - run_discrepancy_analysis:334 - Starting discrepancy analysis
+2025-09-22 15:25:09,626 - INFO - run_discrepancy_analysis:339 - Checking for analysis script: cross_new_csv.py
+2025-09-22 15:25:09,626 - INFO - run_discrepancy_analysis:347 - Analysis script found, preparing to execute
+2025-09-22 15:25:09,627 - INFO - run_discrepancy_analysis:352 - Input files for analysis: ['CERTIFICATE OF ORIGIN.txt', 'COMMERCIAL INVOICE.txt', 'DOCUMENT DISCREPANCIES.txt', 'ilc.txt', 'PACKING LIST.txt', 'QUALITY & CERTIFICATION.txt']
+2025-09-22 15:25:09,627 - INFO - run_discrepancy_analysis:355 - Executing cross_new_csv.py script

@@ -1,0 +1,289 @@
+2025-09-22 14:20:53,614 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:20:53,615 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_142053.log
+2025-09-22 14:20:53,616 - INFO - main:479 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:20:53,616 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:20:53,617 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:20:53,617 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:20:53,618 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:20:53,618 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:20:53,619 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:20:53,619 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:20:53,620 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:20:53,621 - INFO - main:490 - Application initialization completed
+2025-09-22 14:20:53,649 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:20:53,649 - DEBUG - split_secondary_documents:180 - Secondary content size: 2763 characters
+2025-09-22 14:20:53,649 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:20:59,616 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdownTable": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "480 units",
+      "Tar...
+2025-09-22 14:20:59,616 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:20:59,617 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdownTable": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "480 units",
+      "Target Value": "520 units",
+      "Issue": "Mismatch in quantity of goods."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "480 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity of goods."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Certificate of Origin",
+      "Field(s)": "Goods Description",
+      "Base Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+      "Target Value": "Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+      "Issue": "Mismatch in goods description."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Certificate of Origin",
+      "Field(s)": "Quantity",
+      "Base Value": "480 units",
+      "Target Value": "480 units",
+      "Issue": "No discrepancy in quantity."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Inspection / Quality Certificate",
+      "Field(s)": "Inspected Quantity",
+      "Base Value": "480 units",
+      "Target Value": "480 units",
+      "Issue": "No discrepancy in inspection quantity."
+    }
+  ],
+  "detailedAnalysis": {
+    "goldenTruthDocument": "Letter of Credit",
+    "secondaryDocumentsFound": [
+      "Commercial Invoice",
+      "Packing List",
+      "Certificate of Origin",
+      "Inspection / Quality Certificate"
+    ],
+    "totalDiscrepanciesFound": 3,
+    "discrepancies": [
+      {
+        "Serial ID": 1,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D001",
+        "Discrepancy Title": "Mismatch in Quantity of Goods (Commercial Invoice)",
+        "Discrepancy Short Detail": "Quantity in Commercial Invoice does not match LC.",
+        "Discrepancy Long Detail": "The quantity of goods listed in the Commercial Invoice (520 units) exceeds the quantity specified in the Letter of Credit (480 units). This discrepancy could lead to rejection of the document.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 480 units",
+          "Target": "Commercial Invoice → Quantity: 520 units",
+          "Difference": "40 units excess in Commercial Invoice."
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "480 units",
+        "Secondary Document Value": "520 units",
+        "Impact": "The discrepancy may result in non-compliance with the Letter of Credit terms, potentially leading to refusal of payment."
+      },
+      {
+        "Serial ID": 2,
+        "Type": "Quantity Discrepancy",
+        "Discrepancy ID": "D002",
+        "Discrepancy Title": "Mismatch in Quantity of Goods (Packing List)",
+        "Discrepancy Short Detail": "Quantity in Packing List does not match LC.",
+        "Discrepancy Long Detail": "The quantity of goods listed in the Packing List (500 units) exceeds the quantity specified in the Letter of Credit (480 units). This discrepancy could lead to rejection of the document.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 480 units",
+          "Target": "Packing List → Quantity: 500 units",
+          "Difference": "20 units excess in Packing List."
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "480 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "The discrepancy may result in non-compliance with the Letter of Credit terms, potentially leading to refusal of payment."
+      },
+      {
+        "Serial ID": 3,
+        "Type": "Goods Description Discrepancy",
+        "Discrepancy ID": "D003",
+        "Discrepancy Title": "Mismatch in Goods Description (Certificate of Origin)",
+        "Discrepancy Short Detail": "Goods description in Certificate of Origin does not match LC.",
+        "Discrepancy Long Detail": "The goods description in the Certificate of Origin ('Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)') does not match the description in the Letter of Credit ('Rechargeable Lithium-Ion Batteries (Model LP-500)'). This discrepancy could lead to rejection of the document.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Goods Description: Rechargeable Lithium-Ion Batteries (Model LP-500)",
+          "Target": "Certificate of Origin → Goods Description: Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+          "Difference": "Mismatch in battery type and model."
+        },
+        "Severity Level": "Critical",
+        "Golden Truth Value": "Rechargeable Lithium-Ion Batteries (Model LP-500)",
+        "Secondary Document Value": "Rechargeable Batteries for Consumer Devices (Nickel-Metal Hydride)",
+        "Impact": "The discrepancy may result in rejection of the Certificate of Origin, potentially invalidating the shipment's compliance with the Letter of Credit terms."
+      }
+    ]
+  }
+}
+```
+2025-09-22 14:21:14,215 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Ta...
+2025-09-22 14:21:14,215 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:21:14,216 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "520 units",
+      "Issue": "No discrepancy"
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "520 units",
+      "Target Value": "500 units",
+      "Issue": "Mismatch in quantity"
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Certificate of Origin",
+      "Field(s)": "Description",
+      "Base Value": "Rechargeable Lithium-Ion Batteries",
+      "Target Value": "Nickel-Metal Hydride",
+      "Issue": "Mismatch in product description"
+    }
+  ],
+  "detailed_analysis": {
+    "golden_truth_document": "Letter of Credit",
+    "secondary_documents_found": [
+      "Commercial Invoice",
+      "Packing List",
+      "Certificate of Origin"
+    ],
+    "total_discrepancies_found": 2,
+    "discrepancies": [
+      {
+        "Serial ID": "1",
+        "Type": "Quantity",
+        "Discrepancy ID": "QTY-001",
+        "Discrepancy Title": "Mismatch in quantity",
+        "Discrepancy Short Detail": "Quantity mismatch between LC and Packing List",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 520 units, but the Packing List mentions only 500 units. This discrepancy could lead to rejection of the shipment.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Quantity: 520 units",
+          "Target (Secondary)": "Packing List → Quantity: 500 units",
+          "Difference": "20 units less in Packing List"
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "520 units",
+        "Secondary Document Value": "500 units",
+        "Impact": "Potential rejection of shipment due to quantity mismatch."
+      },
+      {
+        "Serial ID": "2",
+        "Type": "Description",
+        "Discrepancy ID": "DESC-001",
+        "Discrepancy Title": "Mismatch in product description",
+        "Discrepancy Short Detail": "Product description mismatch between LC and Certificate of Origin",
+        "Discrepancy Long Detail": "The Letter of Credit specifies 'Rechargeable Lithium-Ion Batteries,' but the Certificate of Origin mentions 'Nickel-Metal Hydride.' This discrepancy could lead to compliance issues.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base (Doc. Credit Letter of Credit)": "Description: Rechargeable Lithium-Ion Batteries",
+          "Target (Secondary)": "Certificate of Origin → Description: Nickel-Metal Hydride",
+          "Difference": "Mismatch in product type"
+        },
+        "Severity Level": "Critical",
+        "Golden Truth Value": "Rechargeable Lithium-Ion Batteries",
+        "Secondary Document Value": "Nickel-Metal Hydride",
+        "Impact": "High risk of rejection due to incorrect product description."
+      }
+    ]
+  }
+}
+```
+2025-09-22 14:21:14,219 - INFO - clean_input_directory:122 - Cleaning input directory
+2025-09-22 14:21:14,220 - DEBUG - clean_input_directory:132 - Deleted file: ilc.txt
+2025-09-22 14:21:14,221 - INFO - clean_input_directory:138 - Cleaned input directory. Deleted 1 files: ['ilc.txt']
+2025-09-22 14:21:14,221 - INFO - save_primary_document:142 - Saving primary document with code: ILC
+2025-09-22 14:21:14,222 - INFO - save_primary_document:161 - Primary document saved successfully: input\ilc.txt
+2025-09-22 14:21:14,224 - DEBUG - save_primary_document:162 - Primary document size: 732 characters
+2025-09-22 14:21:14,224 - INFO - save_primary_document:163 - Added LC heading for cross_new_csv.py compatibility
+2025-09-22 14:21:14,225 - INFO - save_primary_document:164 - Using lowercase filename ilc.txt for LC detection
+2025-09-22 14:21:14,225 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:21:14,226 - DEBUG - split_secondary_documents:180 - Secondary content size: 2763 characters
+2025-09-22 14:21:14,226 - INFO - split_secondary_documents:261 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:21:20,687 - DEBUG - split_secondary_documents:282 - AI response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "500 units",
+      "Ta...
+2025-09-22 14:21:20,687 - ERROR - split_secondary_documents:289 - Failed to parse AI response as JSON: Expecting value: line 1 column 1 (char 0)
+2025-09-22 14:21:20,688 - DEBUG - split_secondary_documents:290 - Raw response: ```json
+{
+  "markdown_table": [
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Commercial Invoice",
+      "Field(s)": "Quantity",
+      "Base Value": "500 units",
+      "Target Value": "520 units",
+      "Issue": "Quantity mismatch between LC and Commercial Invoice."
+    },
+    {
+      "Base Document": "Letter of Credit",
+      "Target Document": "Packing List",
+      "Field(s)": "Quantity",
+      "Base Value": "500 units",
+      "Target Value": "500 units",
+      "Issue": "No discrepancy found."
+    }
+  ],
+  "detailed_analysis": {
+    "GOLDEN_TRUTH_DOCUMENT": "Letter of Credit",
+    "SECONDARY_DOCUMENTS_FOUND": [
+      "Commercial Invoice",
+      "Packing List"
+    ],
+    "TOTAL_DISCREPANCIES_FOUND": 1,
+    "discrepancies": [
+      {
+        "Serial ID": 1,
+        "Type": "Quantity",
+        "Discrepancy ID": "QTY-001",
+        "Discrepancy Title": "Mismatch in Quantity",
+        "Discrepancy Short Detail": "The quantity in the Commercial Invoice does not match the LC.",
+        "Discrepancy Long Detail": "The Letter of Credit specifies a quantity of 500 units, whereas the Commercial Invoice lists 520 units. This discrepancy could lead to compliance issues.",
+        "Discrepancy Base Value vs Target Value": {
+          "Base": "Letter of Credit → Quantity: 500 units",
+          "Target": "Commercial Invoice → Quantity: 520 units",
+          "Difference": "Quantity mismatch of 20 units."
+        },
+        "Severity Level": "High",
+        "Golden Truth Value": "500 units",
+        "Secondary Document Value": "520 units",
+        "Impact": "This discrepancy could result in the rejection of the document set by the issuing bank."
+      }
+    ]
+  }
+}
+```

@@ -1,0 +1,120 @@
+Detailed Analysis
+GOLDEN TRUTH DOCUMENT: Irrevocable Letter of Credit (LC) - ilc.txt
+SECONDARY DOCUMENTS FOUND:
+
+Insurance Certificate - Document_1.txt
+Bill of Lading - Document_2.txt
+TOTAL DISCREPANCIES FOUND: 7
+
+Discrepancy 1
+Serial ID: 1
+Type: Cross-document / Beneficiary Mismatch
+Discrepancy ID: D1-BeneficiaryMismatch
+Discrepancy Title: Beneficiary mismatch between LC and Insurance Certificate
+Discrepancy Short Detail: Beneficiary in the Insurance Certificate does not match the LC.
+Discrepancy Long Detail: The LC specifies the beneficiary as Shenzhen PowerTech Co. Ltd., Shenzhen, China, while the Insurance Certificate lists the beneficiary as Al Madinah Electronics LLC, Dubai, UAE. This discrepancy could lead to rejection of the insurance document as it does not align with the LC terms.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Beneficiary: Shenzhen PowerTech Co. Ltd., Shenzhen, China
+Target (Secondary): Document_1.txt → Beneficiary: Al Madinah Electronics LLC, Dubai, UAE
+Difference: Beneficiary names are entirely different.
+Severity Level: High
+Golden Truth Value: Shenzhen PowerTech Co. Ltd., Shenzhen, China
+Secondary Document Value: Al Madinah Electronics LLC, Dubai, UAE
+Impact: This discrepancy could result in the rejection of the Insurance Certificate, as the beneficiary must match the LC to ensure compliance.
+Discrepancy 2
+Serial ID: 2
+Type: Cross-document / Voyage Mismatch
+Discrepancy ID: D2-VoyageMismatch
+Discrepancy Title: Voyage destination mismatch between LC and Insurance Certificate
+Discrepancy Short Detail: The destination port in the Insurance Certificate does not match the LC.
+Discrepancy Long Detail: The LC specifies the voyage destination as Jebel Ali Port, Dubai, UAE, while the Insurance Certificate lists the destination as Port Khalifa, Abu Dhabi, UAE. This inconsistency could lead to rejection of the Insurance Certificate.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Voyage: Yantian Port, China to Jebel Ali Port, Dubai, UAE
+Target (Secondary): Document_1.txt → Voyage: Yantian Port, China to Port Khalifa, Abu Dhabi, UAE
+Difference: Destination port mismatch.
+Severity Level: High
+Golden Truth Value: Jebel Ali Port, Dubai, UAE
+Secondary Document Value: Port Khalifa, Abu Dhabi, UAE
+Impact: This discrepancy could result in the rejection of the Insurance Certificate, as the voyage details must align with the LC.
+Discrepancy 3
+Serial ID: 3
+Type: Cross-document / Date of Issue Mismatch
+Discrepancy ID: D3-DateOfIssueMismatch
+Discrepancy Title: Insurance Certificate issued after LC's latest shipment date
+Discrepancy Short Detail: The Insurance Certificate was issued after the LC's latest shipment date.
+Discrepancy Long Detail: The LC specifies the latest shipment date as 15 October 2025, but the Insurance Certificate was issued on 25 October 2025. This discrepancy could lead to rejection of the Insurance Certificate as it does not comply with the LC terms.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Latest Shipment Date: 15 October 2025
+Target (Secondary): Document_1.txt → Date of Issue: 25 October 2025
+Difference: Insurance Certificate issued 10 days after the latest shipment date.
+Severity Level: High
+Golden Truth Value: 15 October 2025
+Secondary Document Value: 25 October 2025
+Impact: This discrepancy could result in the rejection of the Insurance Certificate, as it does not align with the LC's shipment timeline.
+Discrepancy 4
+Serial ID: 4
+Type: Cross-document / Goods Description Mismatch
+Discrepancy ID: D4-GoodsDescriptionMismatch
+Discrepancy Title: Goods description mismatch between LC and Bill of Lading
+Discrepancy Short Detail: The goods description in the Bill of Lading does not match the LC.
+Discrepancy Long Detail: The LC specifies "500 units of Lithium-Ion Batteries, UN 3480, Class 9," while the Bill of Lading lists "480 units of Rechargeable Lithium-Ion Batteries (Model LP-500)." This discrepancy could lead to rejection of the Bill of Lading.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Goods Description: 500 units of Lithium-Ion Batteries, UN 3480, Class 9
+Target (Secondary): Document_2.txt → Goods Description: 480 units of Rechargeable Lithium-Ion Batteries (Model LP-500)
+Difference: Quantity and description mismatch.
+Severity Level: High
+Golden Truth Value: 500 units of Lithium-Ion Batteries, UN 3480, Class 9
+Secondary Document Value: 480 units of Rechargeable Lithium-Ion Batteries (Model LP-500)
+Impact: This discrepancy could result in the rejection of the Bill of Lading, as the goods description must match the LC.
+Discrepancy 5
+Serial ID: 5
+Type: Cross-document / Number of Packages Not Specified
+Discrepancy ID: D5-PackagesNotSpecified
+Discrepancy Title: Number of packages not specified in LC but provided in Bill of Lading
+Discrepancy Short Detail: The LC does not specify the number of packages, but the Bill of Lading lists 50 cartons.
+Discrepancy Long Detail: The LC does not mention the number of packages, while the Bill of Lading specifies "50 cartons." This discrepancy may not lead to outright rejection but could raise questions during compliance checks.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Number of Packages: Not explicitly stated
+Target (Secondary): Document_2.txt → Number of Packages: 50 cartons
+Difference: LC silent on number of packages.
+Severity Level: Medium
+Golden Truth Value: Not explicitly stated
+Secondary Document Value: 50 cartons
+Impact: This discrepancy may not lead to outright rejection but could cause delays in processing.
+Discrepancy 6
+Serial ID: 6
+Type: Cross-document / Port of Discharge Mismatch
+Discrepancy ID: D6-PortOfDischargeMismatch
+Discrepancy Title: Port of discharge mismatch between LC and Bill of Lading
+Discrepancy Short Detail: The port of discharge in the Bill of Lading does not match the LC.
+Discrepancy Long Detail: The LC specifies the port of discharge as Jebel Ali Port, Dubai, UAE, while the Bill of Lading lists Port Khalifa, Abu Dhabi, UAE. This discrepancy could lead to rejection of the Bill of Lading.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Port of Discharge: Jebel Ali Port, Dubai, UAE
+Target (Secondary): Document_2.txt → Port of Discharge: Port Khalifa, Abu Dhabi, UAE
+Difference: Port of discharge mismatch.
+Severity Level: High
+Golden Truth Value: Jebel Ali Port, Dubai, UAE
+Secondary Document Value: Port Khalifa, Abu Dhabi, UAE
+Impact: This discrepancy could result in the rejection of the Bill of Lading, as the port of discharge must align with the LC.
+Discrepancy 7
+Serial ID: 7
+Type: Cross-document / Shipment Date Exceeds LC Terms
+Discrepancy ID: D7-ShipmentDateExceedsLC
+Discrepancy Title: Shipment date exceeds LC's latest shipment date
+Discrepancy Short Detail: The shipment date in the Bill of Lading exceeds the LC's latest shipment date.
+Discrepancy Long Detail: The LC specifies the latest shipment date as 15 October 2025, but the Bill of Lading lists the shipment date as 20 October 2025. This discrepancy could lead to rejection of the Bill of Lading.
+Discrepancy Base Value vs Target Value:
+
+Base (Doc. Credit ilc.txt): Latest Shipment Date: 15 October 2025
+Target (Secondary): Document_2.txt → Date of Shipment: 20 October 2025
+Difference: Shipment date exceeds LC's latest shipment date by 5 days.
+Severity Level: High
+Golden Truth Value: 15 October 2025
+Secondary Document Value: 20 October 2025
+Impact: This discrepancy could result in the rejection of the Bill of Lading, as the shipment date must comply with the LC terms.

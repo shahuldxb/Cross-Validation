@@ -1,0 +1,32 @@
+Got it—here’s a quick, no-nonsense comparison between **your table** and **my earlier table** (ILC as base).
+
+# Where we fully agree (exact match)
+
+* **Port of Discharge/Destination mismatch**: ILC says **Jebel Ali (Dubai)** vs other docs show **Port Khalifa (Abu Dhabi)**.
+* **Late shipment**: Shipment **after ILC’s latest shipment date (15 Oct 2025)**.
+
+# Same issue, framed slightly differently (“close match”)
+
+* **Quantity vs Goods row**: I called out **short quantity (500 → 480)** as a quantity mismatch; your row lists it under **Goods Description**. Same underlying discrepancy.
+* **Route/destination in Insurance**: I flagged **ILC ↔ Insurance destination mismatch**; you called it **Voyage mismatch**. Same effect (route/destination doesn’t align with ILC).
+* **Goods description specifics**: I noted **missing UN 3480 / Class 9** in the B/L; your row focuses on **model/units** wording. Both are description mismatches; mine adds the UN/Class compliance angle.
+
+# In your table (I didn’t have)
+
+* **Beneficiary mismatch (ILC ↔ Insurance)** — good catch.
+* **Number of packages** (not stated in ILC vs 50 cartons in B/L) — correct as a cross-doc disclosure inconsistency.
+* **Insurance date vs ILC latest shipment date** — you mark Insurance issued **after 15-Oct-2025**. (I checked timing against the **actual shipment date** instead—see below.)
+
+# In my table (you didn’t include)
+
+* **Insurance issued after shipment date (B/L ↔ Insurance timing)** — I flagged Insurance dated **after the shipment date**, a common bank check (cover must be in force on/ before shipment). Your version ties it to **LC latest shipment date**; both can be used, but the **shipment-date check** is the stricter/standard one for coverage timing.
+* **Partial shipments clause implication** — I noted that a **short quantity** can conflict with **“Partial Shipments: Not Allowed.”** You didn’t call that out explicitly.
+
+# Summary scorecard
+
+* **Exact matches:** 2
+* **Close / same underlying issue, different framing:** 3
+* **You added (good extras):** 3 (Beneficiary, Packages count, Insurance vs latest-shipment date)
+* **I added (not in yours):** 2 (Insurance after shipment date; Partial-shipments implication)
+
+If you want, I can produce a **unified table** that merges both sets (keeping ILC as base) and export it as a CSV to your `out` folder—say `cross_doc_discrepancies_merged.csv`.

@@ -1,0 +1,156 @@
+2025-09-22 14:57:38,805 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:57:38,806 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_145738.log
+2025-09-22 14:57:38,806 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:57:38,807 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:57:38,808 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:57:38,808 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:57:38,809 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:57:38,812 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:57:38,816 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:57:38,817 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:57:38,817 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:57:38,818 - INFO - main:445 - Application initialization completed
+2025-09-22 14:57:38,842 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:57:38,842 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 14:57:38,843 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:57:38,913 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 14:57:38,913 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_145738.log
+2025-09-22 14:57:38,915 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 14:57:38,915 - INFO - create_directories:112 - Creating required directories
+2025-09-22 14:57:38,916 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 14:57:38,916 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 14:57:38,916 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 14:57:38,916 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 14:57:38,917 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 14:57:38,917 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 14:57:38,917 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 14:57:38,917 - INFO - main:445 - Application initialization completed
+2025-09-22 14:57:38,938 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:57:38,938 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 14:57:38,938 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:57:45,760 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 14:57:45,760 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 14:57:45,760 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 14:57:45,760 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 14:57:45,760 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 14:57:45,761 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 14:57:45,761 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 14:57:45,761 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 14:57:45,761 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 14:57:45,762 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 14:57:45,762 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 14:57:45,762 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 14:57:45,763 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 543 chars
+2025-09-22 14:57:48,406 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 14:57:48,406 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 14:57:48,406 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 14:57:48,406 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 14:57:48,407 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 14:57:48,407 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 14:57:48,407 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 14:57:48,407 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 14:57:48,407 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 14:57:48,407 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 14:57:48,407 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 14:57:48,408 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 14:57:48,408 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 14:57:48,415 - INFO - clean_input_directory:122 - Cleaning input directory
+2025-09-22 14:57:48,417 - DEBUG - clean_input_directory:132 - Deleted file: CERTIFICATE OF ORIGIN.txt
+2025-09-22 14:57:48,418 - DEBUG - clean_input_directory:132 - Deleted file: COMMERCIAL INVOICE.txt
+2025-09-22 14:57:48,418 - DEBUG - clean_input_directory:132 - Deleted file: DANGEROUS GOODS DECLARATION.txt
+2025-09-22 14:57:48,419 - DEBUG - clean_input_directory:132 - Deleted file: ilc.txt
+2025-09-22 14:57:48,420 - DEBUG - clean_input_directory:132 - Deleted file: PACKING LIST.txt
+2025-09-22 14:57:48,420 - DEBUG - clean_input_directory:132 - Deleted file: QUALITY CERTIFICATE.txt
+2025-09-22 14:57:48,420 - INFO - clean_input_directory:138 - Cleaned input directory. Deleted 6 files: ['CERTIFICATE OF ORIGIN.txt', 'COMMERCIAL INVOICE.txt', 'DANGEROUS GOODS DECLARATION.txt', 'ilc.txt', 'PACKING LIST.txt', 'QUALITY CERTIFICATE.txt']
+2025-09-22 14:57:48,421 - INFO - save_primary_document:142 - Saving primary document with code: ILC
+2025-09-22 14:57:48,424 - INFO - save_primary_document:161 - Primary document saved successfully: input\ilc.txt
+2025-09-22 14:57:48,424 - DEBUG - save_primary_document:162 - Primary document size: 732 characters
+2025-09-22 14:57:48,425 - INFO - save_primary_document:163 - Added LC heading for cross_new_csv.py compatibility
+2025-09-22 14:57:48,426 - INFO - save_primary_document:164 - Using lowercase filename ilc.txt for LC detection
+2025-09-22 14:57:48,426 - INFO - split_secondary_documents:174 - Starting AI-based secondary document splitting
+2025-09-22 14:57:48,427 - DEBUG - split_secondary_documents:180 - Secondary content size: 2770 characters
+2025-09-22 14:57:48,427 - INFO - split_secondary_documents:216 - Sending content to Azure OpenAI for document splitting
+2025-09-22 14:57:50,825 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 14:57:50,826 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 14:57:50,826 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 14:57:50,827 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 14:57:50,827 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 14:57:50,827 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 14:57:50,827 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 14:57:50,827 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 14:57:50,828 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 14:57:50,829 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 14:57:50,829 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 14:57:50,830 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 14:57:50,831 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 14:58:00,923 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 14:58:00,924 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 14:58:00,924 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 14:58:00,924 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 14:58:00,924 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 14:58:00,924 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 14:58:00,924 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 14:58:00,924 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 14:58:00,925 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 14:58:00,925 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 14:58:00,926 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 14:58:00,927 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 14:58:00,929 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 14:58:00,930 - INFO - save_secondary_documents:272 - Saving 5 secondary documents
+2025-09-22 14:58:00,934 - INFO - save_secondary_documents:301 - Saved secondary document: COMMERCIAL INVOICE.txt (Commercial Invoice) with heading: Commercial Invoice (INV)
+2025-09-22 14:58:00,935 - INFO - save_secondary_documents:301 - Saved secondary document: PACKING LIST.txt (Packing List) with heading: Packing List (PL)
+2025-09-22 14:58:00,936 - INFO - save_secondary_documents:301 - Saved secondary document: CERTIFICATE OF ORIGIN.txt (Certificate of Origin) with heading: Insurance Certificate (INS)
+2025-09-22 14:58:00,938 - INFO - save_secondary_documents:301 - Saved secondary document: QUALITY CERTIFICATE.txt (Unknown) with heading: Trade Document (Unknown)
+2025-09-22 14:58:00,940 - INFO - save_secondary_documents:301 - Saved secondary document: DANGEROUS GOODS DECLARATION.txt (Unknown) with heading: Trade Document (Unknown)
+2025-09-22 14:58:00,941 - INFO - save_secondary_documents:308 - Successfully saved 5 secondary documents
+2025-09-22 14:58:00,954 - INFO - run_discrepancy_analysis:334 - Starting discrepancy analysis
+2025-09-22 14:58:00,954 - INFO - run_discrepancy_analysis:339 - Checking for analysis script: cross_new_csv.py
+2025-09-22 14:58:00,955 - INFO - run_discrepancy_analysis:347 - Analysis script found, preparing to execute
+2025-09-22 14:58:00,955 - INFO - run_discrepancy_analysis:352 - Input files for analysis: ['CERTIFICATE OF ORIGIN.txt', 'COMMERCIAL INVOICE.txt', 'DANGEROUS GOODS DECLARATION.txt', 'ilc.txt', 'PACKING LIST.txt', 'QUALITY CERTIFICATE.txt']
+2025-09-22 14:58:00,956 - INFO - run_discrepancy_analysis:355 - Executing cross_new_csv.py script
+2025-09-22 14:58:25,046 - INFO - run_discrepancy_analysis:363 - Script execution completed with return code: 0
+2025-09-22 14:58:25,047 - INFO - run_discrepancy_analysis:366 - Script stdout: [*] Starting Trade Finance Compliance Analysis
+==================================================
+[OK] Folders ready: .\input and .\output
+[OK] Found 6 .txt files:
+  - CERTIFICATE OF ORIGIN.txt
+  - COMMERCIAL INVOICE.txt
+  - DANGEROUS GOODS DECLARATION.txt
+  - ilc.txt
+  - PACKING LIST.txt
+  - QUALITY CERTIFICATE.txt
+[OK] LC document identified by filename: ilc.txt
+[OK] Secondary documents: 5 files
+
+[PROCESSING] Building analysis prompt...
+[PROCESSING] Sending documents to Azure OpenAI for analysis...
+[OK] Analysis completed successfully
+[OK] Results saved to: .\output\compliance_analysis_ilc_20250922_145824.md
+[OK] CSV exported: .\output\compliance_analysis_ilc_20250922_145824.csv
+
+==================================================
+[SUCCESS] Compliance Analysis Completed Successfully!
+[REPORT] Report saved to: .\output\compliance_analysis_ilc_20250922_145824.md
+[CSV] CSV exported alongside the report in the output folder.
+[STATS] Base Document: ilc.txt
+[FILES] Secondary Documents: 5 files analyzed
+
+2025-09-22 14:58:25,048 - INFO - run_discrepancy_analysis:380 - Found analysis report: output\compliance_analysis_ilc_20250922_145824.md
+2025-09-22 14:58:25,049 - INFO - run_discrepancy_analysis:384 - Found analysis CSV: output\compliance_analysis_ilc_20250922_145824.csv
+2025-09-22 14:58:25,049 - INFO - run_discrepancy_analysis:391 - Discrepancy analysis completed successfully
+2025-09-22 14:58:25,051 - INFO - display_file_content:403 - Displaying file content: output\compliance_analysis_ilc_20250922_145824.md (type: text)
+2025-09-22 14:58:25,060 - INFO - display_file_content:422 - Successfully displayed text content (8763 characters)
+2025-09-22 14:58:25,062 - INFO - display_file_content:403 - Displaying file content: output\compliance_analysis_ilc_20250922_145824.csv (type: csv)
+2025-09-22 14:58:25,077 - INFO - display_file_content:409 - Successfully displayed CSV with 15 rows

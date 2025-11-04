@@ -1,0 +1,172 @@
+2025-09-22 15:28:48,907 - INFO - setup_audit_logging:77 - === AUDIT LOG STARTED ===
+2025-09-22 15:28:48,908 - INFO - setup_audit_logging:78 - Log file: logs\audit_20250922_152848.log
+2025-09-22 15:28:48,909 - INFO - main:434 - === STARTING MAIN APPLICATION ===
+2025-09-22 15:28:48,909 - INFO - create_directories:112 - Creating required directories
+2025-09-22 15:28:48,910 - INFO - create_directories:118 - Directories created successfully: input/, output/
+2025-09-22 15:28:48,911 - INFO - validate_azure_config:84 - Starting Azure OpenAI configuration validation
+2025-09-22 15:28:48,911 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_ENDPOINT: SET
+2025-09-22 15:28:48,911 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_KEY: SET
+2025-09-22 15:28:48,912 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_API_VERSION: SET
+2025-09-22 15:28:48,912 - INFO - validate_azure_config:100 - Environment variable AZURE_OPENAI_CHAT_DEPLOYMENT: SET
+2025-09-22 15:28:48,912 - INFO - validate_azure_config:107 - Azure OpenAI configuration validation completed successfully
+2025-09-22 15:28:48,913 - INFO - main:445 - Application initialization completed
+2025-09-22 15:28:49,819 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:49,819 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:49,819 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:49,819 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:49,819 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:49,819 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:49,819 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:49,819 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:49,820 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:49,820 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:49,820 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:49,820 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:49,821 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:50,236 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:50,236 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:50,236 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:50,237 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:50,237 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:50,237 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:50,237 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:50,237 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:50,238 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:50,238 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:50,239 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:50,239 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:50,240 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:50,406 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:50,406 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:50,407 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:50,407 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:50,407 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:50,407 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:50,407 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:50,407 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:50,408 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:50,409 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:50,410 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:50,411 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:50,413 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:50,641 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:50,641 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:50,642 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:50,642 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:50,642 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:50,642 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:50,642 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:50,642 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:50,642 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:50,642 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:50,642 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:50,642 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:50,643 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:51,124 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:51,124 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:51,124 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:51,125 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:51,125 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:51,125 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:51,125 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:51,125 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:51,125 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:51,125 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:51,125 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:51,125 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:51,125 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 543 chars
+2025-09-22 15:28:51,428 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:51,429 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:51,429 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:51,429 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:51,429 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:51,429 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:51,429 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:51,429 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:51,429 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:51,429 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:51,429 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:51,430 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:51,430 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:51,608 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:51,608 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:51,608 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:51,608 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:51,608 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:51,608 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:51,608 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:51,608 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:51,609 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:51,609 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:51,609 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:51,609 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:51,609 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:54,033 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:54,034 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:54,034 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:54,034 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:54,034 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:54,034 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:54,034 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:54,034 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:54,035 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:54,035 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:54,035 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:54,036 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:54,036 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
+2025-09-22 15:28:54,177 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:54,177 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:54,177 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:54,177 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:54,177 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:54,177 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:54,177 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:54,177 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:54,178 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:54,178 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:54,179 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:54,179 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:54,179 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 543 chars
+2025-09-22 15:28:55,016 - DEBUG - split_secondary_documents:237 - AI response: [
+  {
+    "heading": "COMMERCIAL INVOICE",
+    "content": "Seller: Shenzhen PowerTech Co. Ltd., Shenzhen, China\nInvoice No.: INV-2025-1025\nDate of Invoice: 25 October 2025\nBuyer: Al Madina Electron...
+2025-09-22 15:28:55,018 - INFO - split_secondary_documents:242 - Successfully parsed JSON response with 5 documents
+2025-09-22 15:28:55,020 - DEBUG - split_secondary_documents:253 - AI identified document: COMMERCIAL INVOICE -> Commercial Invoice
+2025-09-22 15:28:55,020 - DEBUG - split_secondary_documents:253 - AI identified document: PACKING LIST -> Packing List
+2025-09-22 15:28:55,020 - DEBUG - split_secondary_documents:253 - AI identified document: CERTIFICATE OF ORIGIN -> Certificate of Origin
+2025-09-22 15:28:55,020 - DEBUG - split_secondary_documents:253 - AI identified document: QUALITY CERTIFICATE -> Unknown
+2025-09-22 15:28:55,020 - DEBUG - split_secondary_documents:253 - AI identified document: DANGEROUS GOODS DECLARATION -> Unknown
+2025-09-22 15:28:55,020 - INFO - split_secondary_documents:255 - AI-based document splitting completed. Found 5 documents
+2025-09-22 15:28:55,020 - INFO - split_secondary_documents:260 - Document 1: COMMERCIAL INVOICE (Commercial Invoice) - 527 chars
+2025-09-22 15:28:55,021 - INFO - split_secondary_documents:260 - Document 2: PACKING LIST (Packing List) - 557 chars
+2025-09-22 15:28:55,021 - INFO - split_secondary_documents:260 - Document 3: CERTIFICATE OF ORIGIN (Certificate of Origin) - 477 chars
+2025-09-22 15:28:55,021 - INFO - split_secondary_documents:260 - Document 4: QUALITY CERTIFICATE (Unknown) - 550 chars
+2025-09-22 15:28:55,022 - INFO - split_secondary_documents:260 - Document 5: DANGEROUS GOODS DECLARATION (Unknown) - 523 chars
